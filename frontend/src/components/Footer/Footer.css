@@ -1,0 +1,108 @@
+.footer {
+  /* height: 250px; */
+  /* margin-top: 1000px; */
+  padding: 30px;
+  background-color: var(--CARD-800);
+}
+
+.footer_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.footer_card {
+  padding: 20px;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_card h1 {
+  font-size: 20px;
+  margin: 10px 0px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+.footer_card p {
+  font-size: 12px;
+  padding: 8px 0px;
+  color: var(--CARD-600);
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.footer_newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 0px;
+}
+
+.footer_newsletter h1 {
+  font-size: 20px;
+  margin: 5px 0px;
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+.footer_newsletter p {
+  font-size: 12px;
+  padding: 10px 0px;
+  color: var(--CARD-600);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.footer_newsletter input {
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius-3);
+  padding: 10px;
+  background-color: var(--CARD-INPUT);
+  box-shadow: var(--box-shadow);
+  width: 250px;
+}
+
+.footer_newsletter input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--CARD-400);
+  opacity: 0.5; /* Firefox */
+}
+
+.footer_newsletter input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: red;
+}
+
+.footer_newsletter input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: red;
+}
+
+.footer_newsletter button {
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius-3);
+  padding: 10px;
+  background-color: var(--accent);
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-top: 15px;
+  width: 120px;
+}
+
+@media screen and (max-width: 700px) {
+  .footer_container {
+    grid-template-columns: 1fr;
+  }
+  .footer_card {
+    padding: 0px 0px;
+  }
+}

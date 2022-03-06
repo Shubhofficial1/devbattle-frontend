@@ -1,0 +1,115 @@
+.home {
+  padding: 10px 20px;
+  max-width: 1400px;
+}
+
+.home_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home_left_container {
+  flex: 2;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home_left_container h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 10px;
+  width: 85%;
+}
+
+.home_button_container {
+  margin-top: 30px;
+}
+
+.home_button {
+  border: none;
+  outline: none;
+  width: 160px;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-5);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: var(--font-size);
+  color: white;
+  background-color: var(--accent);
+  cursor: pointer;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all 0.1s ease-in-out;
+}
+
+.home_button:hover {
+  transform: scale(1.01);
+}
+
+.home_right_container {
+  flex: 3;
+  min-height: 450px;
+  padding: 20px;
+  border-radius: var(--border-radius-5);
+  background-color: var(--CARD-800);
+  box-shadow: var(--box-shadow);
+  transform: perspective(1400px) rotateY(-15deg);
+}
+
+.title {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 18px;
+  color: var(--CARD-600);
+}
+
+.title1 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--CARD-600);
+}
+
+.description {
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--CARD-600);
+}
+
+.home_card {
+  display: grid;
+  margin: 30px 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* grid-auto-rows: 280px; */
+}
+
+@media screen and (max-width: 700px) {
+  .home {
+    padding: 0px 0px;
+  }
+  .home_card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home_container {
+    flex-direction: column;
+  }
+  .home_left_container {
+    align-items: center;
+  }
+  .home_left_container h3 {
+    text-align: center;
+    width: 80%;
+  }
+  .home_right_container {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+.card {
+  background-color: var(--CARD);
+  border-radius: var(--border-radius-5);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  overflow-y: hidden;
+  transition: all ease-in-out 0.2s;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.card_logo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.card_title {
+  font-size: 14px;
+  margin-top: 15px;
+  color: var(--text-color);
+}
+
+.card_description {
+  font-size: 12px;
+  color: var(--CARD-600);
+  font-weight: 600;
+  margin-top: 10px;
+}
