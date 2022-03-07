@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react'
 import './Header.css'
 import { BsThreeDots } from 'react-icons/bs'
 import { BsBrightnessHigh } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
   const [theme, setTheme] = useState('light')
+  const [loggedIn, setLoggedIn] = useState(true)
+
+  const history = useNavigate()
 
   useEffect(() => {
     document.documentElement.setAttribute(
@@ -13,6 +17,13 @@ const Header = () => {
     )
     setTheme(localStorage.getItem('theme'))
   }, [])
+
+  const handleClick = () => {
+    history('/profile')
+  }
+  const handleClickToHome = () => {
+    history('/')
+  }
 
   const saveTheme = (theme) => {
     setTheme(theme)
@@ -32,7 +43,9 @@ const Header = () => {
       <div className='header_triplebar'>
         <BsThreeDots />
       </div>
-      <div className='header_logo'>Dev</div>
+      <div className='header_logo' onClick={handleClickToHome}>
+        Dev
+      </div>
       <div className='header_content'>
         <button>Products</button>
         <button>Content</button>
@@ -42,7 +55,12 @@ const Header = () => {
 
       <div className='header_profile'>
         <BsBrightnessHigh className='header_darkmode' onClick={switchTheme} />
-        Log In
+
+        {loggedIn ? (
+          <div className='header_profile_img' onClick={handleClick}></div>
+        ) : (
+          <>Log In</>
+        )}
       </div>
     </header>
   )

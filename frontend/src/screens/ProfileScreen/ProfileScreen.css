@@ -1,0 +1,233 @@
+.profile {
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.profile_container {
+  display: grid;
+  grid-template-columns: 235fr 641fr 365fr;
+  column-gap: 20px;
+}
+
+.profile_container > div {
+  border-radius: var(--border-radius-5);
+}
+
+.profile_settings {
+  padding: 30px 10px;
+}
+
+.profile_settings h1 {
+  color: var(--CARD-500);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+.profile_settings p {
+  font-size: 12px;
+  padding: 5px;
+  padding-left: 10px;
+  color: var(--CARD-600);
+  font-weight: 500;
+  border-radius: var(--border-radius-3);
+}
+
+.profile_settings p:hover {
+  background-color: var(--CARD-700);
+  color: white;
+}
+
+.profile_container > div:nth-child(1) {
+}
+.profile_container > div:nth-child(2) {
+  background-color: var(--CARD);
+}
+
+.profile_container > div:nth-child(3) {
+  background-color: var(--CARD);
+}
+
+.profile_content {
+  padding: 30px 10px;
+}
+
+.profile_content h1 {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.profile_image_container {
+  background-color: var(--CARD);
+  border-radius: var(--border-radius-5);
+  display: flex;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  /* border: 1px solid var(--CARD-900); */
+}
+
+.profile_image {
+  width: 80px;
+  height: 80px;
+  background-color: var(--CARD-600);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile_image_change {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile_image_change_container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.profile_image_change_container h1 {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 3px 6px;
+  border-radius: var(--border-radius-3);
+  background-color: var(--CARD-600);
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.profile_image_change_container button {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: var(--border-radius-3);
+  background-color: var(--CARD-600);
+  cursor: pointer;
+}
+
+.profile_image_change p {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--CARD-500);
+}
+
+.profile_header {
+  background-color: var(--CARD);
+  border-radius: var(--border-radius-5);
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.profile_header_image {
+  height: 120px;
+  border-radius: var(--border-radius-5);
+  width: 100%;
+  background-color: var(--CARD-700);
+  margin-bottom: 10px;
+}
+
+.profile_header_change {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile_header_change_container {
+  display: flex;
+}
+
+.profile_header_change_container h1 {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 3px 6px;
+  border-radius: var(--border-radius-3);
+  background-color: var(--CARD-600);
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.profile_header_change_container button {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: var(--border-radius-3);
+  background-color: var(--CARD-600);
+  cursor: pointer;
+}
+
+.profile_header_change p {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--CARD-500);
+}
+.profile_details {
+  padding: 30px 10px;
+  height: fit-content;
+}
+
+.profile_identification {
+  display: flex;
+}
+
+.profile_img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--CARD-700);
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.profile_names {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile_names h1 {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.profile_names p {
+  font-size: 14px;
+  color: var(--CARD-600);
+}
+
+.profile_stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0px;
+}
+
+.profile_stats span {
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--CARD-600);
+}
+
+.profile_description p {
+  font-size: 14px;
+  text-transform: lowercase;
+  color: var(--CARD-500);
+}
+
+@media screen and (max-width: 700px) {
+  .profile_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .profile_container {
+    grid-template-columns: 1fr;
+  }
+
+  .profile_container > div:nth-child(1) {
+    display: none;
+  }
+}
