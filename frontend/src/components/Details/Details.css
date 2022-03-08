@@ -1,0 +1,52 @@
+.profile_details {
+  padding: 20px 15px;
+  height: fit-content;
+}
+
+.profile_identification {
+  display: flex;
+}
+
+.profile_img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--CARD-700);
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.profile_names {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile_names h1 {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.profile_names p {
+  font-size: 14px;
+  color: var(--CARD-600);
+}
+
+.profile_stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0px;
+}
+
+.profile_stats span {
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--CARD-600);
+}
+
+.profile_description p {
+  font-size: 14px;
+  text-transform: lowercase;
+  color: var(--CARD-500);
+}

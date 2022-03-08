@@ -1,42 +1,42 @@
-.profile {
+.appearance {
   padding: 10px 20px;
   max-width: 1400px;
 }
 
-.profile_container {
+.appearance_container {
   display: grid;
   grid-template-columns: 235fr 641fr 365fr;
   gap: 20px;
 }
 
-.profile_container > div {
+.appearance_container > div {
   border-radius: var(--border-radius-5);
 }
 
-.profile_container > div:nth-child(2) {
+.appearance_container > div:nth-child(2) {
   background-color: var(--CARD);
 }
 
-.profile_container > div:nth-child(3) {
+.appearance_container > div:nth-child(3) {
   background-color: var(--CARD);
 }
 
 @media screen and (max-width: 700px) {
-  .profile_container {
+  .appearance_container {
     grid-template-columns: 1fr;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .profile_container {
+  .appearance_container {
     grid-template-columns: 1fr;
   }
 
-  .profile_container > div:nth-child(1) {
+  .appearance_container > div:nth-child(1) {
     display: none;
   }
 
-  .profile_container > div:nth-child(3) {
+  .appearance_container > div:nth-child(3) {
     display: none;
   }
 }
