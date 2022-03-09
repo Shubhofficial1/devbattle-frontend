@@ -1,0 +1,12 @@
+.notification_content {
+  padding: 15px;
+  height: fit-content;
+}
+
+.notification_content h1 {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 0px;
+  color: var(--CARD-500);
+  text-transform: uppercase;
+}

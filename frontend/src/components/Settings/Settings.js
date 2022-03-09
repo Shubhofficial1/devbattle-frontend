@@ -18,16 +18,6 @@ const Settings = () => {
         <p> Security & Privacy </p>
       </Link>
 
-      <h1>Billing Settings</h1>
-
-      <Link className='link' to='/billing'>
-        <p> Billing</p>
-      </Link>
-
-      <Link className='link' to='/premium'>
-        <p> Premium</p>
-      </Link>
-
       <h1>App Setting</h1>
 
       <Link className='link' to='/appearance'>
@@ -40,6 +30,16 @@ const Settings = () => {
 
       <Link className='link' to='/changelog'>
         <p> Changelog</p>
+      </Link>
+
+      <h1>Billing Settings</h1>
+
+      <Link className='link' to='/billing'>
+        <p> Billing</p>
+      </Link>
+
+      <Link className='link' to='/premium'>
+        <p> Premium</p>
       </Link>
     </div>
   )

@@ -1,0 +1,50 @@
+.account_content {
+  padding: 15px;
+}
+
+.account_content h1 {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 0px;
+  color: var(--CARD-500);
+  text-transform: uppercase;
+}
+
+.account_remove_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.delete_account_text {
+  margin: 10px 0px;
+}
+
+.account_delete_container {
+  background-color: var(--CARD-900);
+  padding: 10px;
+  border-radius: var(--border-radius-3);
+}
+
+.account_delete_container p {
+  font-size: 10px;
+  color: var(--CARD-600);
+  text-transform: capitalize;
+  margin: 5px 0px;
+}
+
+.account_delete_container button {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: var(--border-radius-3);
+  text-transform: capitalize;
+  background-color: var(--accent);
+  cursor: pointer;
+}
+
+.account_delete_container button p {
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}

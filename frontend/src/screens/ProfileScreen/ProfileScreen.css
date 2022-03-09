@@ -30,6 +30,7 @@
 @media screen and (max-width: 1000px) {
   .profile_container {
     grid-template-columns: 1fr;
+    width: 90vw;
   }
 
   .profile_container > div:nth-child(1) {

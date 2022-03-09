@@ -1,0 +1,34 @@
+.radio_card {
+  background-color: var(--CARD-900);
+  padding: 10px;
+  border-radius: var(--border-radius-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.radio_card_left {
+  display: flex;
+  flex-direction: column;
+  flex: 6;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.radio_card_left label {
+  font-size: 14px;
+  color: var(--CARD-600);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.radio_card_left p {
+  font-size: 10px;
+  color: var(--CARD-600);
+}
+
+.radio_card_right {
+  flex: 1;
+  cursor: pointer;
+}

@@ -1,7 +1,25 @@
 import React from 'react'
+import RadioCard from '../RadioCard/RadioCard'
 import './Appearance.css'
+
 const Appearance = () => {
-  return <div>Appearance</div>
+  return (
+    <div className='appearance_content'>
+      <h1>Themes</h1>
+      <RadioCard
+        label={'Nightly (Dark)'}
+        icon={'😎'}
+        description={'Caring about your eyes since 2021.'}
+        type={'themes'}
+      />
+      <RadioCard
+        label={'Dimmed (Light)'}
+        icon={'🤪'}
+        description={'Rethink Your Life decisions.'}
+        type={'themes'}
+      />
+    </div>
+  )
 }
 
 export default Appearance

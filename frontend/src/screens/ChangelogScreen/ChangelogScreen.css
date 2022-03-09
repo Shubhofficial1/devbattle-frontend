@@ -30,6 +30,7 @@
 @media screen and (max-width: 1000px) {
   .changelog_container {
     grid-template-columns: 1fr;
+    width: 90vw;
   }
 
   .changelog_container > div:nth-child(1) {
