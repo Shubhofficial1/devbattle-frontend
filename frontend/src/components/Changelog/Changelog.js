@@ -1,5 +1,5 @@
 import React from 'react'
-import { changelogDetails } from '../../data/changelogDetails'
+import { changelogDetails } from '../../Data/changelogDetails'
 import ChangelogCard from '../ChangelogCard/ChangelogCard'
 import './Changelog.css'
 const Changelog = () => {

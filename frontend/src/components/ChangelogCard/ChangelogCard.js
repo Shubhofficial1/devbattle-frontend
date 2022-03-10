@@ -16,6 +16,6 @@ const ChangelogCard = ({ type, text, date, color }) => {
 }
 
 ChangelogCard.defaultProps = {
-  color: '#8bdb81',
+  color: '#5773ff',
 }
 export default ChangelogCard
