@@ -1,0 +1,37 @@
+.title {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 18px;
+  color: var(--CARD-600);
+}
+
+.title1 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--CARD-600);
+}
+
+.description {
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--CARD-600);
+}
+
+.home_card {
+  display: grid;
+  margin: 30px 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .home_card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+}

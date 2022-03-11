@@ -1,43 +1,59 @@
 import React from 'react'
 import './HomeScreen.css'
-import { CardDetails } from '../../Data/CardDetails'
-import Card from '../../components/Card/Card'
+import HomeContainer from '../../components/HomeContainer/HomeContainer'
+import HomeCard from '../../components/HomeCard/HomeCard'
 
 const HomeScreen = () => {
   return (
     <div className='home'>
-      {/* Action Container */}
-      <div className='home_container'>
-        <div className='home_left_container'>
-          <h1>Devbattle</h1>
-          <h3>
-            The ultimate resource to prepare for coding interviews. Everything
-            you need, in one streamlined platform.
-          </h3>
-          <div className='home_button_container noselect'>
-            <button className='home_button'>buy Devbattle</button>
-          </div>
+      {/* Cta container */}
+      <HomeContainer />
+      {/* What we offer */}
+      <HomeCard />
+      {/* Videos */}
+      <div className='video_container'>
+        <div className='video_left'>
+          <div className='video'></div>
         </div>
-        <div className='home_right_container'></div>
+        <div className='video_right'>
+          <h1>High-Quality Videos.</h1>
+          <p>
+            We firmly believe in the effectiveness of video as an educational
+            medium. That's why our crash courses come with over 50
+            high-resolution videos, boasting crystal-clear audio for a truly
+            premium experience. Concepts are explained at length and, where
+            applicable, are showcased in action in the browser.
+          </p>
+          <p>
+            Meanwhile, each of our 25 frontend coding questions includes a
+            thorough video explanation, where we walk you through every step of
+            the solution in detail. Preparing for frontend interviews has never
+            been easier.
+          </p>
+          <button className='noselect'>Become a Devbattle expert</button>
+        </div>
       </div>
-
-      {/* What we Offer */}
-      <h1 className='title'>Devbattle 👨‍🎓</h1>
-      <h1 className='title1'>Proudly educating the Developers Community</h1>
-      <p className='description'>
-        We're super proud to educate the Developers community and place students
-        in the best companies on the planet.
-      </p>
-      <div className='home_card'>
-        {CardDetails.map((card) => (
-          <Card
-            key={card.title}
-            logo={card.logo}
-            color={card.color}
-            title={card.title}
-            description={card.description}
-          />
-        ))}
+      <div className='video_container'>
+        <div className='video_right'>
+          <h1>A State-Of-The-Art Workspace.</h1>
+          <p>
+            We firmly believe in the effectiveness of video as an educational
+            medium. That's why our crash courses come with over 50
+            high-resolution videos, boasting crystal-clear audio for a truly
+            premium experience. Concepts are explained at length and, where
+            applicable, are showcased in action in the browser.
+          </p>
+          <p>
+            Meanwhile, each of our 25 frontend coding questions includes a
+            thorough video explanation, where we walk you through every step of
+            the solution in detail. Preparing for frontend interviews has never
+            been easier.
+          </p>
+          <button className='noselect'>Become a Devbattle expert</button>
+        </div>
+        <div className='video_left'>
+          <div className='video'></div>
+        </div>
       </div>
     </div>
   )

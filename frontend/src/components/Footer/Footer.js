@@ -5,23 +5,22 @@ const Footer = () => {
     <footer className='footer noselect'>
       <div className='footer_container'>
         <div className=' footer_card'>
-          <h1>gallery</h1>
-          <p>community</p>
-          <p>Trending</p>
-          <p>Picks</p>
+          <h1>Laerning Paths</h1>
+          <p>Web app development</p>
+          <p>Mobile app development</p>
+          <p>Python Programming</p>
         </div>
         <div className='footer_card '>
-          <h1>Marketplace</h1>
-          <p>Trending</p>
-          <p>Best Selling</p>
-          <p>Latest</p>
+          <h1>Company</h1>
+          <p>Blog</p>
+          <p>Carrers</p>
+          <p>Refer & Earn</p>
         </div>
+
         <div className=' footer_card '>
-          <h1>Magazine</h1>
-          <p>Art Skills</p>
-          <p>Carrer</p>
-          <p>Inspiration</p>
-          <p>News</p>
+          <h1>Support</h1>
+          <p>Contact Us</p>
+          <p>Pricing</p>
         </div>
         <div className='footer_newsletter'>
           <h1>NewsLetter</h1>
