@@ -9,6 +9,7 @@ import AccountScreen from './screens/AccountScreen/AccountScreen'
 import SecurityScreen from './screens/SecurityScreen/SecurityScreen'
 import AppearanceScreen from './screens/AppearanceScreen/AppearanceScreen'
 import NotificationScreen from './screens/NotificationScreen/NotificationScreen'
+import CourseScreen from './screens/CourseScreen/CourseScreen'
 // import ChangelogScreen from './screens/ChangelogScreen/ChangelogScreen'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/security' element={<SecurityScreen />} />
           <Route path='/appearance' element={<AppearanceScreen />} />
           <Route path='/notification' element={<NotificationScreen />} />
+          <Route path='/courses' element={<CourseScreen />} />
           {/* <Route path='/changelog' element={<ChangelogScreen />} /> */}
         </Routes>
       </main>

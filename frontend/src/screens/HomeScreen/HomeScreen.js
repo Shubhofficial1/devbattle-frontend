@@ -13,7 +13,16 @@ const HomeScreen = () => {
       {/* Videos */}
       <div className='video_container'>
         <div className='video_left'>
-          <div className='video'></div>
+          <div className='video'>
+            {/* <iframe
+              src='https://player.vimeo.com/video/253989945?h=c6db007fe5&color=ef0800&title=0&byline=0&portrait=0'
+              width='100%'
+              height='100%'
+              frameborder='0'
+              allow='autoplay; fullscreen; picture-in-picture'
+              allowfullscreen
+            ></iframe> */}
+          </div>
         </div>
         <div className='video_right'>
           <h1>High-Quality Videos.</h1>

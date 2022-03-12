@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className='footer noselect'>
       <div className='footer_container'>
         <div className=' footer_card'>
-          <h1>Laerning Paths</h1>
+          <h1>Learning Paths</h1>
           <p>Web app development</p>
           <p>Mobile app development</p>
           <p>Python Programming</p>
