@@ -1,32 +1,59 @@
 import React from 'react'
 import './Footer.css'
+import { FaFacebookF } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
+import { FaYoutube } from 'react-icons/fa'
+import { GoMarkGithub } from 'react-icons/go'
+
 const Footer = () => {
   return (
-    <footer className='footer noselect'>
-      <div className='footer_container'>
-        <div className=' footer_card'>
-          <h1>Learning Paths</h1>
-          <p>Web app development</p>
-          <p>Mobile app development</p>
-          <p>Python Programming</p>
-        </div>
-        <div className='footer_card '>
-          <h1>Company</h1>
-          <p>Blog</p>
-          <p>Carrers</p>
-          <p>Refer & Earn</p>
-        </div>
-
-        <div className=' footer_card '>
-          <h1>Support</h1>
-          <p>Contact Us</p>
-          <p>Pricing</p>
-        </div>
-        <div className='footer_newsletter'>
-          <h1>NewsLetter</h1>
-          <p>Subscribe to our newsletter</p>
-          <input placeholder='Enter Your Email Address' />
-          <button className='noselect'>Subscribe</button>
+    <footer className='footer'>
+      <div className='footer__container'>
+        {/* <div className='footer__logo'></div> */}
+        <div className='footer__row'>
+          <div className='footer__col '>
+            <h4>About</h4>
+            <p className='noselect'>about</p>
+            <p className='noselect'>Help Center</p>
+            <p className='noselect'>Submit a Ticket</p>
+            <p className='noselect'>Discord</p>
+            <p className='noselect'>Contact</p>
+          </div>
+          <div className='footer__col'>
+            <h4>Learning</h4>
+            <p className='noselect'>introduction</p>
+            <p className='noselect'>Documentation</p>
+            <p className='noselect'>Api Access</p>
+            <p className='noselect'>Dis</p>
+            <p className='noselect'>Contact</p>
+          </div>
+          <div className='footer__col'>
+            <h4>Company</h4>
+            <p className='noselect'>Help Center</p>
+            <p className='noselect'>Chat with us</p>
+            <p className='noselect'>Careers</p>
+            <p className='noselect'>Discord</p>
+            <p className='noselect'>Contact</p>
+          </div>
+          <div className='footer__contact'>
+            <h4>Contact Us</h4>
+            <p>React out to us & we'll help you with all our best</p>
+            <p> &copy; Devbattle 2022 | All Rights Reserved</p>
+            <div className='contact__links'>
+              <div>
+                <FaFacebookF />
+              </div>
+              <div>
+                <FaInstagram />
+              </div>
+              <div>
+                <FaYoutube />
+              </div>
+              <div>
+                <GoMarkGithub />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
