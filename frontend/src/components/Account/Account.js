@@ -29,7 +29,7 @@ const Account = () => {
         <div className='account_delete_container'>
           <p>
             this is one way operation. once you delete your account , there is
-            no going back. please be cartain ⚡.
+            no going back. please be certain ⚡.
           </p>
           <button className='noselect'>
             <p>Delete your account</p>
