@@ -24,8 +24,8 @@ const Footer = () => {
             <p className='noselect'>introduction</p>
             <p className='noselect'>Documentation</p>
             <p className='noselect'>Api Access</p>
-            <p className='noselect'>Dis</p>
-            <p className='noselect'>Contact</p>
+            <p className='noselect'>Goodies</p>
+            <p className='noselect'>Discord</p>
           </div>
           <div className='footer__col'>
             <h4>Company</h4>

@@ -13,7 +13,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: var(--CARD-600);
+  background-color: var(--CARD-900);
   margin: 10px 20px;
   cursor: pointer;
 }
@@ -33,14 +33,14 @@
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
-  color: var(--CARD-700);
+  color: var(--text-dark);
   margin-bottom: 10px;
 }
 
 .footer__col > p {
   font-size: 12px;
   font-weight: 600;
-  color: var(--CARD-600);
+  color: var(--text-dark-light);
   margin-bottom: 8px;
   text-transform: capitalize;
   cursor: pointer;
@@ -54,14 +54,14 @@
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
-  color: var(--CARD-700);
+  color: var(--text-dark);
   margin-bottom: 10px;
 }
 
 .footer__contact p {
   font-size: 10px;
   font-weight: 500;
-  color: var(--CARD-600);
+  color: var(--text-dark-light);
   margin-bottom: 8px;
   text-transform: capitalize;
 }
@@ -75,7 +75,7 @@
   margin-right: 10px;
   width: 30px;
   height: 30px;
-  background-color: var(--CARD-700);
+  background-color: var(--CARD-600);
   display: flex;
   justify-content: center;
   align-items: center;

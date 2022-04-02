@@ -29,7 +29,7 @@
 
 .card_description {
   font-size: 12px;
-  color: var(--CARD-600);
+  color: var(--text-dark-light);
   font-weight: 600;
   margin-top: 10px;
 }

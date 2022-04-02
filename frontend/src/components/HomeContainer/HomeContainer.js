@@ -10,7 +10,7 @@ const HomeContainer = () => {
           need to crush the frontend interviews.
         </h3>
         <div className='home_button_container noselect'>
-          <button className='home_button'>buy Devbattle</button>
+          <button className='home_button'>Buy Devbattle</button>
         </div>
       </div>
       <div className='home_right_container'></div>

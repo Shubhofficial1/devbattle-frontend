@@ -9,7 +9,6 @@ const HomeScreen = () => {
     <div className='home'>
       <HomeContainer />
       <HomeCard />
-
       <ProductContainer
         heading={'High-Quality Videos 🎯'}
         imageUrl={'https://portfolio-3994e.web.app/images/project4.jpeg'}
@@ -21,7 +20,6 @@ const HomeScreen = () => {
         }
         buttonText={'Watch Courses'}
       />
-
       <ProductContainer
         heading={'Data Structures Crash Course 📚'}
         imageUrl={'https://portfolio-3994e.web.app/images/project3.jpeg'}

@@ -37,13 +37,12 @@ p,
 ::-moz-selection {
   /* Code for Firefox */
   color: white;
-  background: #fd4d4d;
+  background: #5773ff;
 }
 
 ::selection {
   color: white;
   background: #5773ff;
-
   -webkit-text-fill-color: var(--selection-text) !important;
   background-image: none !important;
   background-clip: revert !important;
@@ -52,8 +51,73 @@ p,
 
 :root {
   --accent: #fd4d4d;
+  --accent-light: #ff5f5f;
   --PURE-WHITE: #ffffff;
-  --text-color: #000000;
+  --PURE-BLACK: #000000;
+  --text-color: #0b0e11;
+  --text-dark: #242c37;
+  --text-dark-light: #323d4d;
+  --text-dark-superlight: #f5f5f5;
+  --background-color: #ffffff;
+  --CARD: #ffffff;
+  --font-family: 'Poppins', sans-serif;
+  --border-radius-3: 3px;
+  --border-radius-5: 5px;
+  --box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+
+  --CARD-100: #f6f9fc;
+  --CARD-200: #f6f9fc;
+  --CARD-300: #f6f9fc;
+  --CARD-400: #f6f9fc;
+  --CARD-500: #f6f9fc;
+  --CARD-600: #323d4d;
+  --CARD-700: #242c37;
+  --CARD-800: #f6f9fc;
+  --CARD-900: #c1c4c7;
+}
+
+[data-theme='dark'] {
+  --accent: #fd4d4d;
+  --accent-light: #ff5f5f;
+  --PURE-WHITE: #ffffff;
+  --PURE-BLACK: #000000;
+  --text-color: #ffffff;
+  --text-dark: #242c37;
+  --text-dark-light: #323d4d;
+  --text-dark-superlight: #f5f5f5;
+  --background-color: #0b0e11;
+  --CARD: #151a21;
+  --font-family: 'Poppins', sans-serif;
+  --border-radius-3: 3px;
+  --border-radius-5: 5px;
+  --box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.6);
+
+  --CARD-100: #3f3f3f;
+  --CARD-200: #b2bdcd;
+  --CARD-300: #5d7290;
+  --CARD-400: #4f617a;
+  --CARD-500: #404f64;
+  --CARD-600: #323d4d;
+  --CARD-700: #242c37;
+  --CARD-800: #151a21;
+  --CARD-900: #0b0e11;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* 
+:root {
+  --accent: #fd4d4d;
+  --PURE-WHITE: #ffffff;
+  --text-color: #0b0e11;
   --font-family: 'Poppins', sans-serif;
   --background-color: #ffffff;
   --box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
@@ -95,12 +159,5 @@ p,
   --CARD-900: #0b0e11;
 }
 
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
+
+*/

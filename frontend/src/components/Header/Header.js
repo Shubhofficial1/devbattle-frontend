@@ -39,28 +39,30 @@ const Header = () => {
     }
   }
   return (
-    <header className='header_container noselect'>
-      <div className='header_triplebar'>
-        <BsThreeDots />
-      </div>
-      <div className='header_logo' onClick={handleClickToHome}>
-        Dev
-      </div>
-      <div className='header_content'>
-        <button>Products</button>
-        <button>Content</button>
-        <button>Team</button>
-        <button>Purchase</button>
-      </div>
+    <header>
+      <div className='header_container noselect'>
+        <div className='header_triplebar'>
+          <BsThreeDots />
+        </div>
+        <div className='header_logo' onClick={handleClickToHome}>
+          Dev
+        </div>
+        <div className='header_content'>
+          <button>Products</button>
+          <button>Content</button>
+          <button>Team</button>
+          <button>Purchase</button>
+        </div>
 
-      <div className='header_profile'>
-        <BsBrightnessHigh className='header_darkmode' onClick={switchTheme} />
+        <div className='header_profile'>
+          <BsBrightnessHigh className='header_darkmode' onClick={switchTheme} />
 
-        {loggedIn ? (
-          <div className='header_profile_img' onClick={handleClick}></div>
-        ) : (
-          <>Log In</>
-        )}
+          {loggedIn ? (
+            <div className='header_profile_img' onClick={handleClick}></div>
+          ) : (
+            <>Log In</>
+          )}
+        </div>
       </div>
     </header>
   )

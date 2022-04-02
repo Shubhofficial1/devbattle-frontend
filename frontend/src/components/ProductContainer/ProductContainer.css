@@ -21,10 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--CARD-800);
-}
-
-.product__image:hover {
+  background-color: var(--CARD);
   box-shadow: var(--box-shadow);
 }
 
@@ -46,32 +43,38 @@
 .product__right h1 {
   font-size: 22px;
   font-weight: 400;
-  color: var(--CARD-500);
+  color: var(--text-dark-light);
   margin: 15px 0px;
 }
 
 .product__right p {
   font-size: 14px;
   font-weight: 400;
-  color: var(--CARD-600);
+  color: var(--text-dark-light);
   margin: 15px 0px;
 }
 
 .product__right button {
   border: none;
   outline: none;
-  padding: 10px 15px;
-  border-radius: var(--border-radius-3);
+  border-radius: var(--border-radius-5);
   background-color: var(--accent);
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-  margin: 20px 0px;
-  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--PURE-WHITE);
   text-transform: capitalize;
-  width: 228px;
+  margin: 20px 0px;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 200px;
   height: 40px;
+  font-family: var(--font-family);
 }
+
+.product__right button:hover {
+  background-color: var(--accent-light);
+}
+
 @media screen and (max-width: 700px) {
   .product__container {
     grid-template-columns: 1fr;

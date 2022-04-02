@@ -30,9 +30,10 @@
   width: 160px;
   padding: 10px 20px;
   border-radius: var(--border-radius-5);
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   text-transform: capitalize;
-  font-size: var(--font-size);
+  text-transform: capitalize;
   color: white;
   background-color: var(--accent);
   cursor: pointer;
@@ -50,7 +51,7 @@
   min-height: 450px;
   padding: 20px;
   border-radius: var(--border-radius-5);
-  background-color: var(--CARD-800);
+  background-color: var(--CARD);
   box-shadow: var(--box-shadow);
   transform: perspective(1400px) rotateY(-15deg);
 }
