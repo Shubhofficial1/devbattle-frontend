@@ -38,6 +38,23 @@ const Header = () => {
       saveTheme('light')
     }
   }
+
+  const handleCourses = () => {
+    history('/courses')
+  }
+
+  const handleTeam = () => {
+    history('/team')
+  }
+
+  const handleBlogs = () => {
+    history('/blogs')
+  }
+
+  const handlePricing = () => {
+    history('/pricing')
+  }
+
   return (
     <header>
       <div className='header_container noselect'>
@@ -48,10 +65,10 @@ const Header = () => {
           Dev
         </div>
         <div className='header_content'>
-          <button>Products</button>
-          <button>Content</button>
-          <button>Team</button>
-          <button>Purchase</button>
+          <button onClick={handleCourses}>Courses</button>
+          <button onClick={handleTeam}>Team</button>
+          <button onClick={handleBlogs}>Blogs</button>
+          <button onClick={handlePricing}>Pricing</button>
         </div>
 
         <div className='header_profile'>

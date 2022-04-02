@@ -33,20 +33,9 @@
   color: var(--CARD-600);
 }
 
-.profile_stats {
-  display: flex;
-  justify-content: space-around;
-  margin: 15px 0px;
-}
-
-.profile_stats span {
-  font-size: 14px;
-  cursor: pointer;
-  color: var(--CARD-600);
-}
-
 .profile_description p {
   font-size: 14px;
   text-transform: lowercase;
   color: var(--CARD-500);
+  margin-top: 10px;
 }

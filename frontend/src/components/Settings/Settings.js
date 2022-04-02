@@ -28,10 +28,6 @@ const Settings = () => {
         <p> Notifications </p>
       </Link>
 
-      {/* <Link className='link' to='/changelog'>
-        <p> Changelog</p>
-      </Link> */}
-
       <h1>Billing Settings</h1>
 
       <Link className='link' to='/billing'>

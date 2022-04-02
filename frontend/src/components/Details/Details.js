@@ -10,10 +10,6 @@ const Details = () => {
           <p>@Shubham</p>
         </div>
       </div>
-      <div className='profile_stats'>
-        <span>3.4k Followers</span>
-        <span>89 Following</span>
-      </div>
       <div className='profile_description'>
         <p>
           We're super proud to educate the Developers community and place

@@ -1,0 +1,48 @@
+const courses = [
+  {
+    _id: '1',
+    name: 'React Masterclass',
+    image: '/images/airpods.jpg',
+    description: 'Build real world project from scratch',
+    brand: 'Apple',
+    category: 'Frontend',
+    price: 999,
+    rating: 4.5,
+    numReviews: 4,
+  },
+  {
+    _id: '2',
+    name: 'Fullstack Development 101',
+    image: '/images/phone.jpg',
+    description: 'Master of all trades',
+    brand: 'Apple',
+    category: 'Fullstack',
+    price: 499,
+    rating: 4.0,
+    numReviews: 14,
+  },
+  {
+    _id: '3',
+    name: 'Digital Entrepreneurship',
+    image: '/images/camera.jpg',
+    description: 'Become a Successful risk taker',
+    brand: 'Cannon',
+    category: 'Entrepreneurship',
+    price: 499,
+    rating: 3,
+    numReviews: 3,
+  },
+  {
+    _id: '4',
+    name: 'Flutter - Zero to Hero',
+    image: '/images/playstation.jpg',
+    description: 'The ultimate Mobile develpement course',
+    brand: 'Sony',
+    category: 'Mobile Developement',
+    price: 999,
+    rating: 5,
+    numReviews: 3,
+  },
+]
+
+export default courses

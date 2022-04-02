@@ -74,6 +74,8 @@ p,
   --CARD-700: #242c37;
   --CARD-800: #f6f9fc;
   --CARD-900: #c1c4c7;
+
+  --IMAGE-DARK: #f2f2f2;
 }
 
 [data-theme='dark'] {
@@ -101,6 +103,8 @@ p,
   --CARD-700: #242c37;
   --CARD-800: #151a21;
   --CARD-900: #0b0e11;
+
+  --IMAGE-DARK: #242c37;
 }
 
 .noselect {
