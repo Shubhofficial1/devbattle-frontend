@@ -1,0 +1,20 @@
+.rating {
+  margin-top: 5px;
+  padding: 0px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating__container span {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-dark-light);
+  margin: 2px 1px;
+}
+
+.rating__text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-dark-light);
+}

@@ -11,6 +11,7 @@ import AppearanceScreen from './screens/AppearanceScreen/AppearanceScreen'
 import NotificationScreen from './screens/NotificationScreen/NotificationScreen'
 import CourseScreen from './screens/CourseScreen/CourseScreen'
 import PricingScreen from './screens/PricingScreen/PricingScreen'
+import CourseDetailsScreen from './screens/CourseDetailsScreen/CourseDetailsScreen'
 // import ChangelogScreen from './screens/ChangelogScreen/ChangelogScreen'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path='/appearance' element={<AppearanceScreen />} />
           <Route path='/notification' element={<NotificationScreen />} />
           <Route path='/courses' element={<CourseScreen />} />
+          <Route path='/courses/:id' element={<CourseDetailsScreen />} />
           <Route path='/pricing' element={<PricingScreen />} />
         </Routes>
       </main>

@@ -1,0 +1,33 @@
+.course__details {
+  padding: 10px 20px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.back-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 15px 22px;
+  background-color: var(--CARD);
+  color: var(-text-color);
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+}
+
+.course__container {
+  height: 60vh;
+  background-color: var(--CARD);
+  border-radius: var(--border-radius-3);
+  margin-top: 10px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .course__details {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+}

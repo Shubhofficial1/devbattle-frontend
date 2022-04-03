@@ -1,6 +1,8 @@
 import React from 'react'
 import './CourseScreen.css'
 import courses from '../../Data/Courses'
+import Rating from '../../components/Rating/Rating'
+import { Link } from 'react-router-dom'
 const CourseScreen = () => {
   return (
     <div className='course'>
@@ -8,14 +10,25 @@ const CourseScreen = () => {
       <p>Learn Anything here with best possible guidance</p>
       <div className='course__grid'>
         {courses.map((course) => (
-          <div className='course__card noselect'>
-            <div className='course_img'></div>
-            <h1>{course.name}</h1>
-            <p>{course.description}</p>
-            <p>
-              {course.rating} Rating from {course.numReviews} Reviews
-            </p>
-          </div>
+          <Link to={`/courses/${course._id}`}>
+            <div key={course._id} className='course__card noselect'>
+              <div className='course_img'></div>
+              <h1>{course.name}</h1>
+              <p>{course.description}</p>
+              <Rating
+                value={course.rating}
+                text={`${course.numReviews} reviews`}
+              />
+              <div className='course__price'>
+                <div className='course__people'>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <h3>₹{course.price}</h3>
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
