@@ -10,6 +10,37 @@ const courses = [
     rating: 4.5,
     numReviews: 4,
     language: 'english',
+    stack: [
+      {
+        name: 'react',
+        imageUrl: '',
+      },
+      {
+        name: 'redux',
+        imageUrl: '',
+      },
+      {
+        name: 'sass',
+        imageUrl: '',
+      },
+    ],
+    notes: [
+      {
+        text: 'The course is taught by the lead instructor at the App Brewery, Londons leading in-person programming bootcamp.',
+      },
+      {
+        text: 'At 65+ hours, this Web Development course is without a doubt the most comprehensive web development course available online. Even if you have zero programming experience, this course will take you from beginner to mastery.',
+      },
+      {
+        text: 'Weve taught over a million students how to code and many have gone on to change their lives by becoming professional developers or starting their own tech startup.',
+      },
+      {
+        text: 'you will save yourself over $12,000 by enrolling, but still get access to the same teaching materials and learn from the same instructor and curriculum as our in-person programming bootcamp.',
+      },
+      {
+        text: 'The course is constantly updated with new content, with new projects and modules determined by students - thats you!',
+      },
+    ],
     content: [
       {
         _id: '1a',
@@ -96,6 +127,37 @@ const courses = [
     rating: 4.0,
     numReviews: 14,
     language: 'english',
+    stack: [
+      {
+        name: 'react',
+        imageUrl: '',
+      },
+      {
+        name: 'redux',
+        imageUrl: '',
+      },
+      {
+        name: 'sass',
+        imageUrl: '',
+      },
+    ],
+    notes: [
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+    ],
     content: [
       {
         _id: '1a',
@@ -182,6 +244,37 @@ const courses = [
     rating: 3,
     numReviews: 3,
     language: 'english',
+    stack: [
+      {
+        name: 'react',
+        imageUrl: '',
+      },
+      {
+        name: 'redux',
+        imageUrl: '',
+      },
+      {
+        name: 'sass',
+        imageUrl: '',
+      },
+    ],
+    notes: [
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+    ],
     content: [
       {
         _id: '1a',
@@ -268,6 +361,37 @@ const courses = [
     rating: 5,
     numReviews: 3,
     language: 'english',
+    stack: [
+      {
+        name: 'react',
+        imageUrl: '',
+      },
+      {
+        name: 'redux',
+        imageUrl: '',
+      },
+      {
+        name: 'sass',
+        imageUrl: '',
+      },
+    ],
+    notes: [
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+      {
+        text: 'hey there',
+      },
+    ],
     content: [
       {
         _id: '1a',

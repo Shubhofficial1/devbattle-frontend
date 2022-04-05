@@ -1,10 +1,100 @@
-.course__details {
+.course__details__container {
   padding: 10px 20px;
   max-width: 1400px;
   width: 100%;
 }
 
-.back-btn {
+.details__container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  min-height: 100vh;
+}
+
+.course__details {
+  /* border: 1px solid violet; */
+  text-transform: capitalize;
+}
+
+.course__link {
+  display: flex;
+  padding: 10px;
+}
+
+.course__course__link {
+  color: var(--text-dark-light);
+  cursor: pointer;
+  font-size: 10px;
+  margin-right: 3px;
+}
+
+.course__course__current {
+  color: var(--text-dark);
+  font-size: 10px;
+}
+
+.course__overview {
+  padding: 10px;
+}
+
+.course__overview h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.course__overview p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-dark-light);
+}
+
+.course__image {
+  width: 90%;
+  height: 400px;
+  margin-top: 10px;
+  background-color: var(--CARD);
+  border-radius: var(--border-radius-5);
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.course__outline {
+  overflow-y: auto;
+  min-height: 600px;
+  padding: 10px;
+}
+
+.notes__container {
+  margin-top: 20px;
+}
+
+.notes__container div {
+  border-bottom: 2px solid var(--accent);
+  cursor: pointer;
+  width: fit-content;
+  margin: 10px 0px;
+}
+
+.course__notes {
+  width: 50%;
+  font-size: 12px !important;
+  font-weight: 500;
+  color: var(--text-dark-light);
+  margin-top: 7px;
+}
+
+.course__outline h1 {
+  padding: 15px;
+  background-color: var(--CARD);
+  margin: 2px 0px;
+  cursor: pointer;
+  border-radius: var(--border-radius-3);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark-light);
+}
+
+/* .back-btn {
   cursor: pointer;
   border: none;
   outline: none;
@@ -21,7 +111,7 @@
   border-radius: var(--border-radius-3);
   margin-top: 10px;
   padding: 10px;
-}
+} */
 
 @media screen and (max-width: 700px) {
   .course__details {
