@@ -38,19 +38,38 @@ const CourseDetailsScreen = () => {
             <h1>{course.name}</h1>
             <p>{course.description}</p>
             <div className='course__image'></div>
-
+            <div className='notes__title'>Notes</div>
             <div className='notes__container'>
-              <div>Notes</div>
-              {course.notes.map((note) => (
-                <p className='course__notes'>{note.text}</p>
-              ))}
+              <div className='notes'>
+                {course.notes.map((note) => (
+                  <p className='course__notes'>{note.text}</p>
+                ))}
+              </div>
+              <div className='course__author__container noselect'>
+                <h1>About Instructor</h1>
+                <div className='author__card'>
+                  <div className='card__left'>
+                    <div className='author__image'></div>
+                  </div>
+                  <div className='card__right'>
+                    <h2>Shubham Kumar</h2>
+                    <p>Seniour Analyst</p>
+                  </div>
+                </div>
+                <div className='author__description'>
+                  <p>
+                    we're super proud to educate the developers community and
+                    place students in the best companies on the planet. ⭐
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div className='course__outline'>
-          {course.content.map((cont) => (
+          {/* {course.content.map((cont) => (
             <h1>{cont.sectionTitle}</h1>
-          ))}
+          ))} */}
         </div>
       </div>
       {/* <pre>{JSON.stringify(course, null, 3)}</pre> */}

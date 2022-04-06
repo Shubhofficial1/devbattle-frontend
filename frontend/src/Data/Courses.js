@@ -143,19 +143,19 @@ const courses = [
     ],
     notes: [
       {
-        text: 'hey there',
+        text: 'The course is taught by the lead instructor at the App Brewery, Londons leading in-person programming bootcamp.',
       },
       {
-        text: 'hey there',
+        text: 'At 65+ hours, this Web Development course is without a doubt the most comprehensive web development course available online. Even if you have zero programming experience, this course will take you from beginner to mastery.',
       },
       {
-        text: 'hey there',
+        text: 'Weve taught over a million students how to code and many have gone on to change their lives by becoming professional developers or starting their own tech startup.',
       },
       {
-        text: 'hey there',
+        text: 'you will save yourself over $12,000 by enrolling, but still get access to the same teaching materials and learn from the same instructor and curriculum as our in-person programming bootcamp.',
       },
       {
-        text: 'hey there',
+        text: 'The course is constantly updated with new content, with new projects and modules determined by students - thats you!',
       },
     ],
     content: [
@@ -260,19 +260,19 @@ const courses = [
     ],
     notes: [
       {
-        text: 'hey there',
+        text: 'The course is taught by the lead instructor at the App Brewery, Londons leading in-person programming bootcamp.',
       },
       {
-        text: 'hey there',
+        text: 'At 65+ hours, this Web Development course is without a doubt the most comprehensive web development course available online. Even if you have zero programming experience, this course will take you from beginner to mastery.',
       },
       {
-        text: 'hey there',
+        text: 'Weve taught over a million students how to code and many have gone on to change their lives by becoming professional developers or starting their own tech startup.',
       },
       {
-        text: 'hey there',
+        text: 'you will save yourself over $12,000 by enrolling, but still get access to the same teaching materials and learn from the same instructor and curriculum as our in-person programming bootcamp.',
       },
       {
-        text: 'hey there',
+        text: 'The course is constantly updated with new content, with new projects and modules determined by students - thats you!',
       },
     ],
     content: [
@@ -377,19 +377,19 @@ const courses = [
     ],
     notes: [
       {
-        text: 'hey there',
+        text: 'The course is taught by the lead instructor at the App Brewery, Londons leading in-person programming bootcamp.',
       },
       {
-        text: 'hey there',
+        text: 'At 65+ hours, this Web Development course is without a doubt the most comprehensive web development course available online. Even if you have zero programming experience, this course will take you from beginner to mastery.',
       },
       {
-        text: 'hey there',
+        text: 'Weve taught over a million students how to code and many have gone on to change their lives by becoming professional developers or starting their own tech startup.',
       },
       {
-        text: 'hey there',
+        text: 'you will save yourself over $12,000 by enrolling, but still get access to the same teaching materials and learn from the same instructor and curriculum as our in-person programming bootcamp.',
       },
       {
-        text: 'hey there',
+        text: 'The course is constantly updated with new content, with new projects and modules determined by students - thats you!',
       },
     ],
     content: [
