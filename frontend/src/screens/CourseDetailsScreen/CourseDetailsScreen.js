@@ -3,6 +3,7 @@ import './CourseDetailsScreen.css'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import courses from '../../Data/Courses'
+import { FaRegHeart } from 'react-icons/fa'
 
 const CourseDetailsScreen = () => {
   const { id } = useParams()
@@ -15,9 +16,6 @@ const CourseDetailsScreen = () => {
   }
   return (
     <div className='course__details__container'>
-      {/* <button onClick={handleBackClick} className='back-btn'>
-        Go Back
-      </button> */}
       <div className='course__link'>
         <span className='course__course__link' onClick={handleBackClick}>
           Courses
@@ -27,13 +25,6 @@ const CourseDetailsScreen = () => {
 
       <div className='details__container'>
         <div className='course__details'>
-          {/* <div className='course__link'>
-            <span className='course__course__link' onClick={handleBackClick}>
-              Courses
-            </span>
-            <span className='course__course__current'>/ {course.name}</span>
-          </div> */}
-
           <div className='course__overview'>
             <h1>{course.name}</h1>
             <p>{course.description}</p>
@@ -67,12 +58,23 @@ const CourseDetailsScreen = () => {
           </div>
         </div>
         <div className='course__outline'>
-          {/* {course.content.map((cont) => (
-            <h1>{cont.sectionTitle}</h1>
-          ))} */}
+          <div className='course__video__container'></div>
+          <h1 className='course__outline__price'>₹{course.price}</h1>
+          <p className='course__outline__includes'>
+            59.5 hours on-demand video
+          </p>
+          <p className='course__outline__includes'>12 downloadable resources</p>
+          <p className='course__outline__includes'>12 coding exercises</p>
+          <p className='course__outline__includes'>Full lifetime access</p>
+          <p className='course__outline__includes'>Certificate of completion</p>
+          <div className='course__purchase__container'>
+            <button className='course__buy__button noselect'>Buy Now</button>
+            <button className='course__wishlist__button noselect'>
+              <FaRegHeart />
+            </button>
+          </div>
         </div>
       </div>
-      {/* <pre>{JSON.stringify(course, null, 3)}</pre> */}
     </div>
   )
 }
