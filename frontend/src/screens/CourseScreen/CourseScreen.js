@@ -20,10 +20,12 @@ const CourseScreen = () => {
                 text={`${course.numReviews} reviews`}
               />
               <div className='course__price'>
-                <div className='course__people'>
-                  <div></div>
-                  <div></div>
-                  <div></div>
+                <div className='course__stacks'>
+                  {course.stacks.map((stack) => (
+                    <div className='course__stack'>
+                      <img src={stack.imageUrl} alt={stack.name}></img>
+                    </div>
+                  ))}
                 </div>
                 <h3>₹{course.price}</h3>
               </div>

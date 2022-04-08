@@ -68,17 +68,26 @@
   justify-content: space-between;
 }
 
-.course__people {
+.course__stacks {
   display: flex;
   padding-left: 8px;
 }
 
-.course__people div {
+.course__stack {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: var(--CARD-700);
   margin-left: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course__stack img {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
 }
 
 .course__price h3 {

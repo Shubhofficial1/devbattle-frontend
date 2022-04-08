@@ -14,6 +14,7 @@ const CourseDetailsScreen = () => {
   const handleBackClick = () => {
     history('/courses')
   }
+
   return (
     <div className='course__details__container'>
       <div className='course__link'>
@@ -60,13 +61,10 @@ const CourseDetailsScreen = () => {
         <div className='course__outline'>
           <div className='course__video__container'></div>
           <h1 className='course__outline__price'>₹{course.price}</h1>
-          <p className='course__outline__includes'>
-            59.5 hours on-demand video
-          </p>
-          <p className='course__outline__includes'>12 downloadable resources</p>
-          <p className='course__outline__includes'>12 coding exercises</p>
-          <p className='course__outline__includes'>Full lifetime access</p>
-          <p className='course__outline__includes'>Certificate of completion</p>
+          {course.features.map((feature) => (
+            <p className='course__outline__includes'>{feature.text} </p>
+          ))}
+
           <div className='course__purchase__container'>
             <button className='course__buy__button noselect'>Buy Now</button>
             <button className='course__wishlist__button noselect'>

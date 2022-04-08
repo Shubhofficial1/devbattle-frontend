@@ -1,0 +1,31 @@
+{
+  "name": "devbattle",
+  "version": "1.0.0",
+  "description": "backend for devbattle",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shubhofficial1/devbattle.git"
+  },
+  "keywords": [],
+  "author": "Shubham Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shubhofficial1/devbattle/issues"
+  },
+  "homepage": "https://github.com/Shubhofficial1/devbattle#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.15"
+  }
+}

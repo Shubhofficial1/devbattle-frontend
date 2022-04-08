@@ -41,3 +41,306 @@
     4. I'm really excited to be a part of devbattle. I've always wanted to learn how to make a website, but I could never afford the classes. I'm glad that there is a free way for me to learn.
     */
 }
+
+/*
+content: [
+      {
+        _id: '1a',
+        sectionTitle: 'Basics of Web',
+        videos: [
+          {
+            _id: '1a1',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1a2',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1b',
+        sectionTitle: 'Frontend Basics',
+        videos: [
+          {
+            _id: '1b1',
+            name: 'Advanced Html5/Css3 ',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1b2',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1c',
+        sectionTitle: 'Mastering React.js',
+        videos: [
+          {
+            _id: '1c1',
+            name: 'react 101',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1c2',
+            name: 'Lazy Loading',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1d',
+        sectionTitle: 'Advanced Node.js, MongoDB & Grqphql Apis',
+        videos: [
+          {
+            _id: '1d1',
+            name: 'Node  Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1d2',
+            name: 'mongodb Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+    ],
+
+    content: [
+      {
+        _id: '1a',
+        sectionTitle: 'Basics of Web',
+        videos: [
+          {
+            _id: '1a1',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1a2',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1b',
+        sectionTitle: 'Frontend Basics',
+        videos: [
+          {
+            _id: '1b1',
+            name: 'Advanced Html5/Css3 ',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1b2',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1c',
+        sectionTitle: 'Mastering React.js',
+        videos: [
+          {
+            _id: '1c1',
+            name: 'react 101',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1c2',
+            name: 'Lazy Loading',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1d',
+        sectionTitle: 'Advanced Node.js, MongoDB & Grqphql Apis',
+        videos: [
+          {
+            _id: '1d1',
+            name: 'Node  Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1d2',
+            name: 'mongodb Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+    ],
+content: [
+      {
+        _id: '1a',
+        sectionTitle: 'Basics of Web',
+        videos: [
+          {
+            _id: '1a1',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1a2',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1b',
+        sectionTitle: 'Frontend Basics',
+        videos: [
+          {
+            _id: '1b1',
+            name: 'Advanced Html5/Css3 ',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1b2',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1c',
+        sectionTitle: 'Mastering React.js',
+        videos: [
+          {
+            _id: '1c1',
+            name: 'react 101',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1c2',
+            name: 'Lazy Loading',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1d',
+        sectionTitle: 'Advanced Node.js, MongoDB & Grqphql Apis',
+        videos: [
+          {
+            _id: '1d1',
+            name: 'Node  Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1d2',
+            name: 'mongodb Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+    ],
+
+
+     content: [
+      {
+        _id: '1a',
+        sectionTitle: 'Basics of Web',
+        videos: [
+          {
+            _id: '1a1',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1a2',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1b',
+        sectionTitle: 'Frontend Basics',
+        videos: [
+          {
+            _id: '1b1',
+            name: 'Advanced Html5/Css3 ',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1b2',
+            name: 'internet Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1c',
+        sectionTitle: 'Mastering React.js',
+        videos: [
+          {
+            _id: '1c1',
+            name: 'react 101',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1c2',
+            name: 'Lazy Loading',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+      {
+        _id: '1d',
+        sectionTitle: 'Advanced Node.js, MongoDB & Grqphql Apis',
+        videos: [
+          {
+            _id: '1d1',
+            name: 'Node  Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+          {
+            _id: '1d2',
+            name: 'mongodb Fundamentals',
+            duration: '2.00',
+            isCompleted: false,
+          },
+        ],
+      },
+    ],
+
+*/
