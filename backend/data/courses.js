@@ -1,14 +1,14 @@
 const courses = [
   {
-    _id: '1',
     name: 'react masterclass',
     imageUrl: '/images/react.jpg',
-    videoUrl: '',
+    videoUrl: 'abc',
     description: 'build real world project from scratch',
     category: 'Frontend',
     price: 999,
     rating: 4.5,
     numReviews: 4,
+    reviews: [],
     language: 'english',
     stacks: [
       {
@@ -64,15 +64,15 @@ const courses = [
     ],
   },
   {
-    _id: '2',
     name: 'Fullstack Development',
     imageUrl: '/images/react.jpg',
-    videoUrl: '',
+    videoUrl: 'abc',
     description: 'Master of all trades',
     category: 'Fullstack',
     price: 499,
     rating: 4.0,
     numReviews: 14,
+    reviews: [],
     language: 'english',
     stacks: [
       {
@@ -124,15 +124,15 @@ const courses = [
     ],
   },
   {
-    _id: '3',
     name: 'Digital Entrepreneurship',
     imageUrl: '/images/react.jpg',
-    videoUrl: '',
+    videoUrl: 'abc',
     description: 'Become a Successful risk taker',
     category: 'Entrepreneurship',
     price: 499,
     rating: 3,
     numReviews: 3,
+    reviews: [],
     language: 'english',
     stacks: [
       {
@@ -184,15 +184,15 @@ const courses = [
     ],
   },
   {
-    _id: '4',
     name: 'Flutter - Zero to Hero',
     imageUrl: '/images/react.jpg',
-    videoUrl: '',
+    videoUrl: 'abc',
     description: 'The ultimate Mobile dev course',
     category: 'Mobile Developement',
     price: 999,
     rating: 5,
     numReviews: 3,
+    reviews: [],
     language: 'english',
     stacks: [
       {
@@ -245,4 +245,4 @@ const courses = [
   },
 ]
 
-module.exports = courses
+export default courses

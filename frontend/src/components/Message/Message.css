@@ -1,0 +1,17 @@
+.message__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  padding: 13px 20px;
+  border-left: 3px solid #00bcd4;
+  width: max(300px, 20%);
+  margin-top: 50px;
+  border-radius: var(--border-radius-5);
+  background-color: var(--CARD);
+  cursor: pointer;
+  font-size: 14px;
+}
