@@ -1,0 +1,137 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.modal__content {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  background-color: var(--CARD);
+  transform: translateX(800px);
+  transition: all 0.3s ease-in-out;
+  padding: 10px;
+}
+
+.modal__body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__body h3 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.modal__close__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+.modal__button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: inherit;
+}
+
+.modal__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal__form input {
+  padding: 23px 15px;
+  width: 85%;
+  margin: 10px 0px;
+  border: none;
+  outline: none;
+  background-color: var(--CARD-900);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+::placeholder {
+  color: var(--text-dark-light);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--text-dark-light);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--text-dark-light);
+}
+
+.modal__login__button {
+  width: 85%;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: var(--accent);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.modal__login__button:hover {
+  background-color: var(--accent-light);
+}
+
+.modal__body p {
+  width: 85%;
+  padding: 5px 20px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--text-dark-light);
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modal.show .modal__content {
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 700px) {
+}
+
+@media screen and (max-width: 1000px) {
+  .modal__content {
+    width: 75%;
+  }
+}

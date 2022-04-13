@@ -1,6 +1,6 @@
 const courses = [
   {
-    name: 'react masterclass',
+    name: 'React masterclass',
     imageUrl: '/images/react.jpg',
     videoUrl: 'abc',
     description: 'build real world project from scratch',

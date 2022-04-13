@@ -1,5 +1,4 @@
-import './App.css'
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import HomeScreen from './screens/HomeScreen/HomeScreen'
@@ -12,13 +11,20 @@ import NotificationScreen from './screens/NotificationScreen/NotificationScreen'
 import CourseScreen from './screens/CourseScreen/CourseScreen'
 import PricingScreen from './screens/PricingScreen/PricingScreen'
 import CourseDetailsScreen from './screens/CourseDetailsScreen/CourseDetailsScreen'
-// import ChangelogScreen from './screens/ChangelogScreen/ChangelogScreen'
+import LoginModal from './components/LoginModal/LoginModal'
 
 function App() {
+  const [show, setShow] = useState(false)
   return (
     <div className='app'>
-      <Header />
+      <Header show={show} setShow={setShow} />
       <main>
+        <LoginModal
+          onClose={() => {
+            setShow(false)
+          }}
+          show={show}
+        />
         <Routes>
           <Route path='/' exact element={<HomeScreen />} />
           <Route path='/profile' element={<ProfileScreen />} />

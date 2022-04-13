@@ -78,6 +78,18 @@ header {
   cursor: pointer;
 }
 
+.header__login__button {
+  background-color: inherit;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 @media screen and (max-width: 1000px) {
   .header_triplebar {
     display: block;

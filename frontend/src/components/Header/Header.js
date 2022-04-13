@@ -4,9 +4,8 @@ import { BsThreeDots } from 'react-icons/bs'
 import { BsBrightnessHigh } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ show, setShow }) => {
   const [theme, setTheme] = useState('light')
-  const [loggedIn, setLoggedIn] = useState(true)
 
   const history = useNavigate()
 
@@ -74,10 +73,17 @@ const Header = () => {
         <div className='header_profile'>
           <BsBrightnessHigh className='header_darkmode' onClick={switchTheme} />
 
-          {loggedIn ? (
+          {show ? (
             <div className='header_profile_img' onClick={handleClick}></div>
           ) : (
-            <>Log In</>
+            <button
+              className='header__login__button'
+              onClick={() => {
+                setShow(true)
+              }}
+            >
+              Log In
+            </button>
           )}
         </div>
       </div>
