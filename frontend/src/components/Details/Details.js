@@ -1,20 +1,20 @@
 import React from 'react'
 import './Details.css'
+import { useSelector } from 'react-redux'
 const Details = () => {
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
   return (
     <div className='profile_details'>
       <div className='profile_identification'>
         <div className='profile_img'></div>
         <div className='profile_names'>
-          <h1>Shubham kumar</h1>
-          <p>@Shubham</p>
+          <h1>{userInfo?.name}</h1>
+          <p>{userInfo?.email}</p>
         </div>
       </div>
       <div className='profile_description'>
-        <p>
-          We're super proud to educate the Developers community and place
-          students in the best companies on the planet. ⭐
-        </p>
+        <p>{userInfo?.bio}</p>
       </div>
     </div>
   )

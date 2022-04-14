@@ -24,6 +24,7 @@ function App() {
             setShow(false)
           }}
           show={show}
+          setShow={setShow}
         />
         <Routes>
           <Route path='/' exact element={<HomeScreen />} />

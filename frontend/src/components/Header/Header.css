@@ -76,6 +76,11 @@ header {
   background-color: var(--CARD);
   box-shadow: var(--box-shadow);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .header__login__button {
@@ -88,6 +93,14 @@ header {
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
+}
+
+.logout {
+  border: none;
+  outline: none;
+  padding: 6px 10px;
+  background-color: var(--accent);
+  border-radius: var(--border-radius-3);
 }
 
 @media screen and (max-width: 1000px) {

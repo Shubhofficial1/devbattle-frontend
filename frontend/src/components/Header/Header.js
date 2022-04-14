@@ -3,11 +3,18 @@ import './Header.css'
 import { BsThreeDots } from 'react-icons/bs'
 import { BsBrightnessHigh } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
-
+import { logout } from '../../actions/userActions'
+import { useSelector, useDispatch } from 'react-redux'
+import { USER_LOGOUT } from '../../constants/userConstants'
 const Header = ({ show, setShow }) => {
   const [theme, setTheme] = useState('light')
 
   const history = useNavigate()
+
+  const dispatch = useDispatch()
+
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
 
   useEffect(() => {
     document.documentElement.setAttribute(
@@ -16,6 +23,11 @@ const Header = ({ show, setShow }) => {
     )
     setTheme(localStorage.getItem('theme'))
   }, [])
+
+  const handleLogout = (e) => {
+    e.preventDefault()
+    dispatch(logout())
+  }
 
   const handleClick = () => {
     history('/profile')
@@ -73,8 +85,15 @@ const Header = ({ show, setShow }) => {
         <div className='header_profile'>
           <BsBrightnessHigh className='header_darkmode' onClick={switchTheme} />
 
-          {show ? (
-            <div className='header_profile_img' onClick={handleClick}></div>
+          {userInfo ? (
+            <>
+              <div className='header_profile_img' onClick={handleClick}>
+                <p>{userInfo.name[0]}</p>
+              </div>
+              <button className='logout' onClick={handleLogout}>
+                Logout
+              </button>
+            </>
           ) : (
             <button
               className='header__login__button'
