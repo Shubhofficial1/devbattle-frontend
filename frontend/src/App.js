@@ -15,6 +15,7 @@ import LoginModal from './components/LoginModal/LoginModal'
 
 function App() {
   const [show, setShow] = useState(false)
+
   return (
     <div className='app'>
       <Header show={show} setShow={setShow} />

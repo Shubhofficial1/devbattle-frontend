@@ -5,7 +5,6 @@ import { BsBrightnessHigh } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import { logout } from '../../actions/userActions'
 import { useSelector, useDispatch } from 'react-redux'
-import { USER_LOGOUT } from '../../constants/userConstants'
 const Header = ({ show, setShow }) => {
   const [theme, setTheme] = useState('light')
 

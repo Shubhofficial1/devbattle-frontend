@@ -1,6 +1,7 @@
 .profile_details {
   padding: 20px 15px;
   height: fit-content;
+  min-width: 342px;
 }
 
 .profile_identification {
