@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './LoginModal.css'
 import { AiOutlineClose } from 'react-icons/ai'
-import { login } from '../../actions/userActions'
+import { login, register } from '../../actions/userActions'
 import { useSelector, useDispatch } from 'react-redux'
 import Message from '../Message/Message.js'
 
@@ -19,6 +19,11 @@ const LoginModal = (props) => {
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo, error, loading } = userLogin
 
+  // const userRegister = useSelector((state) => state.userRegister)
+  // const { loading, error, userInfo } = userRegister
+
+  // One idea is to change text in reducer
+
   const submitLoginHandler = (e) => {
     e.preventDefault()
     dispatch(login(loginEmail, loginPassword))
@@ -29,6 +34,11 @@ const LoginModal = (props) => {
 
   const submitRegisterHandler = (e) => {
     e.preventDefault()
+    dispatch(register(registerName, registerEmail, registerPassword))
+    setRegisterName('')
+    setRegisterEmail('')
+    setregisterPassword('')
+    props.setShow(false)
   }
 
   return (
@@ -48,7 +58,11 @@ const LoginModal = (props) => {
           </button>
         </div>
 
-        {showLoginBody && (
+        {userInfo && (
+          <h1 style={{ textAlign: 'center' }}>Logged In Successfully. 🚀</h1>
+        )}
+
+        {!userInfo && showLoginBody && (
           <div className='modal__body'>
             <h3>Sign Up or Login</h3>
             <form onSubmit={submitLoginHandler} className='modal__form'>
@@ -94,7 +108,7 @@ const LoginModal = (props) => {
           </div>
         )}
 
-        {!showLoginBody && (
+        {!userInfo && !showLoginBody && (
           <div className='modal__body'>
             <h3>Sign Up or Login</h3>
             <form onSubmit={submitRegisterHandler} className='modal__form'>

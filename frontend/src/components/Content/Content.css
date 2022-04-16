@@ -57,7 +57,7 @@
 /* profile form */
 
 .profile_form {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .profile_form h1 {
@@ -87,10 +87,11 @@
 
 .profile_form_col input {
   padding: 10px;
-  width: 85%;
+  width: 90%;
   margin-top: 5px;
   border: none;
   outline: none;
+  color: var(--text-dark-light);
   background-color: var(--CARD-900);
   border-radius: var(--border-radius-3);
 }
@@ -115,6 +116,7 @@
   border: none;
   outline: none;
   resize: none;
+  color: var(--text-dark-light);
   background-color: var(--CARD-900);
   border-radius: var(--border-radius-3);
 }
@@ -130,9 +132,9 @@
   padding: 10px;
   margin-top: 20px;
   border-radius: var(--border-radius-3);
-  font-weight: 700;
+  font-weight: 500;
   text-transform: capitalize;
-  font-size: var(--font-size);
+  font-size: 14px;
   color: white;
   background-color: var(--accent);
   cursor: pointer;
@@ -141,59 +143,7 @@
 .profile_button button p {
   font-size: 12px;
 }
-/* 
-.profile_image_container {
-  background-color: var(--CARD);
-  border-radius: var(--border-radius-5);
-  display: flex;
-  padding: 10px 15px;
-  margin: 10px 0px;
-}
 
-.profile_image {
-  width: 80px;
-  height: 80px;
-  background-color: var(--CARD-600);
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.profile_image_change {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.profile_image_change_container {
-  display: flex;
-  align-items: center;
-  margin: 10px 0px;
-}
-
-.profile_image_change_container h1 {
-  font-size: 12px;
-  font-weight: 400;
-  padding: 3px 6px;
-  border-radius: var(--border-radius-3);
-  background-color: var(--CARD-600);
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.profile_image_change_container button {
-  border: none;
-  outline: none;
-  padding: 5px;
-  border-radius: var(--border-radius-3);
-  background-color: var(--CARD-600);
-  cursor: pointer;
-}
-
-.profile_image_change p {
-  font-size: 10px;
-  font-weight: 400;
-  color: var(--CARD-500);
-} */
 @media screen and (max-width: 700px) {
   .profile_form_row {
     flex-direction: column;

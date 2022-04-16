@@ -29,7 +29,7 @@ const authUser = AsyncHandler(async (req, res) => {
 // @route   POST /api/users/register
 // @access  Public
 const registerUser = AsyncHandler(async (req, res) => {
-  const { name, email, password, bio } = req.body
+  const { name, email, password } = req.body
 
   const existsUser = await User.findOne({ email })
 
@@ -42,7 +42,7 @@ const registerUser = AsyncHandler(async (req, res) => {
     name,
     email,
     password,
-    bio: 'Hey There , Keep Learning !',
+    bio: 'we are super proud to educate the developers community and place students in the best companies on the planet. ⭐',
   })
 
   if (user) {
@@ -81,4 +81,32 @@ const getUserProfile = AsyncHandler(async (req, res) => {
   }
 })
 
-export { authUser, registerUser, getUserProfile }
+// @desc    Update user profile
+// @route   PUT /api/users/profile
+// @access  Private
+const updateUserProfile = AsyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id)
+
+  if (user) {
+    user.name = req.body.name || user.name
+    user.bio = req.body.bio || user.bio
+    if (req.body.password) {
+      user.password = req.body.password
+    }
+    const updatedUser = await user.save()
+
+    res.json({
+      _id: updatedUser._id,
+      name: updatedUser.name,
+      email: updatedUser.email,
+      bio: updatedUser.bio,
+      isAdmin: updatedUser.isAdmin,
+      token: generateToken(updatedUser._id),
+    })
+  } else {
+    res.status(404)
+    throw new Error('User not found')
+  }
+})
+
+export { authUser, registerUser, getUserProfile, updateUserProfile }

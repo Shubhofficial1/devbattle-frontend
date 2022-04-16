@@ -5,6 +5,8 @@ import { BsBrightnessHigh } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import { logout } from '../../actions/userActions'
 import { useSelector, useDispatch } from 'react-redux'
+import { USER_DETAILS_RESET } from '../../constants/userConstants'
+
 const Header = ({ show, setShow }) => {
   const [theme, setTheme] = useState('light')
 
@@ -26,6 +28,7 @@ const Header = ({ show, setShow }) => {
   const handleLogout = (e) => {
     e.preventDefault()
     dispatch(logout())
+    dispatch({ type: USER_DETAILS_RESET })
   }
 
   const handleClick = () => {
