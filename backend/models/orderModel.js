@@ -7,21 +7,10 @@ const orderSchema = mongoose.Schema(
       required: true,
       ref: 'User',
     },
-    orderItem: {
-      name: { type: String, required: true },
-      description: { type: String, required: true },
-      price: { type: Number, required: true },
-      course: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: 'Course',
-      },
-    },
-    shippingAddress: {
-      address: { type: String, required: true },
-      city: { type: String, required: true },
-      postalCode: { type: String, required: true },
-      country: { type: String, required: true },
+    course: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'Course',
     },
     paymentMethod: {
       type: String,
@@ -29,8 +18,9 @@ const orderSchema = mongoose.Schema(
     },
     paymentResult: {
       id: { type: String },
-      status: { type: String },
-      update_time: { type: String },
+      orderId: { type: String },
+      signature: { type: String },
+      update_time: { type: Date },
       email_address: { type: String },
     },
     totalPrice: {

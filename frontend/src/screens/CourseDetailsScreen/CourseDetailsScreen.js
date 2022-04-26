@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import { FaRegHeart } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
 import { listCourseDetails } from '../../actions/coursesActions'
+import { checkoutOrder } from '../../actions/orderActions'
 import Loader from '../../components/Loader/Loader'
 import Message from '../../components/Message/Message'
 
@@ -17,12 +18,23 @@ const CourseDetailsScreen = () => {
   const courseDetails = useSelector((state) => state.courseDetails)
   const { loading, error, course } = courseDetails
 
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
+
   useEffect(() => {
     dispatch(listCourseDetails(id))
   }, [dispatch, id])
 
   const handleBackClick = () => {
     history('/courses')
+  }
+
+  const handlePayment = () => {
+    if (!userInfo) {
+      history('/')
+    } else {
+      dispatch(checkoutOrder(course))
+    }
   }
 
   return (
@@ -62,16 +74,12 @@ const CourseDetailsScreen = () => {
                         <div className='author__image'></div>
                       </div>
                       <div className='card__right'>
-                        <h2>Shubham Kumar</h2>
-                        <p>Seniour Analyst</p>
+                        <h2>{course.user?.name}</h2>
+                        <p>Lead Educator</p>
                       </div>
                     </div>
                     <div className='author__description'>
-                      <p>
-                        we're super proud to educate the developers community
-                        and place students in the best companies on the planet.
-                        ⭐
-                      </p>
+                      <p>{course.user?.bio}</p>
                     </div>
                   </div>
                 </div>
@@ -87,7 +95,10 @@ const CourseDetailsScreen = () => {
               ))}
 
               <div className='course__purchase__container'>
-                <button className='course__buy__button noselect'>
+                <button
+                  onClick={handlePayment}
+                  className='course__buy__button noselect'
+                >
                   Buy Now
                 </button>
                 <button className='course__wishlist__button noselect'>

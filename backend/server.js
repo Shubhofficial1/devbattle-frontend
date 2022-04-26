@@ -4,7 +4,7 @@ import colors from 'colors'
 import connectDb from './config/db.js'
 import courseRoutes from './routes/courseRoutes.js'
 import userRoutes from './routes/userRoutes.js'
-
+import orderRoutes from './routes/orderRoutes.js'
 import { errorHandler, notFound } from './middleware/errorMiddleware.js'
 
 // Dotenv Configuration
@@ -25,6 +25,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/courses', courseRoutes)
 app.use('/api/users', userRoutes)
+app.use('/api/orders', orderRoutes)
 
 // Middlewares
 

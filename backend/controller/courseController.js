@@ -15,7 +15,11 @@ const getCourses = async (req, res) => {
 // @access  Public
 
 const getCourseById = asyncHandler(async (req, res) => {
-  const course = await Course.findById(req.params.id)
+  const course = await Course.findById(req.params.id).populate(
+    'user',
+    'name bio'
+  )
+
   if (course) {
     res.json(course)
   } else {

@@ -28,7 +28,7 @@ const CourseScreen = () => {
           <h1>Explore Best Courses Here</h1>
           <p>Learn Anything here with best possible guidance</p>
           <div className='course__grid'>
-            {courses.map((course) => (
+            {courses?.map((course) => (
               <Link key={course._id} to={`/courses/${course._id}`}>
                 <div className='course__card noselect'>
                   <div className='course_img'></div>
@@ -40,7 +40,7 @@ const CourseScreen = () => {
                   />
                   <div className='course__price'>
                     <div className='course__stacks'>
-                      {course.stacks.map((stack) => (
+                      {course?.stacks?.map((stack) => (
                         <div key={stack.name} className='course__stack'>
                           <img src={stack.imageUrl} alt={stack.name}></img>
                         </div>
