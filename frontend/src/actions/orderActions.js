@@ -3,6 +3,9 @@ import {
   ORDER_PAY_SUCCESS,
   ORDER_PAY_FAIL,
   ORDER_PAY_RESET,
+  ORDERS_DETAIL_REQUEST,
+  ORDERS_DETAIL_SUCCESS,
+  ORDERS_DETAIL_FAIL,
 } from '../constants/orderConstants'
 import axios from 'axios'
 
@@ -115,4 +118,32 @@ export const checkoutOrder = (course) => async (dispatch, getState) => {
 
 export const orderReset = () => (dispatch) => {
   dispatch({ type: ORDER_PAY_RESET })
+}
+
+export const getOrdersDetails = () => async (dispatch, getState) => {
+  try {
+    dispatch({ type: ORDERS_DETAIL_REQUEST })
+    const {
+      userLogin: { userInfo },
+    } = getState()
+
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    }
+
+    const { data } = await axios.get('/api/orders', config)
+
+    dispatch({ type: ORDERS_DETAIL_SUCCESS, payload: data })
+  } catch (error) {
+    dispatch({
+      type: ORDERS_DETAIL_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
 }

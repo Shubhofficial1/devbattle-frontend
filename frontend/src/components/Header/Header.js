@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { logout } from '../../actions/userActions'
 import { useSelector, useDispatch } from 'react-redux'
 import { USER_DETAILS_RESET } from '../../constants/userConstants'
+import { ORDER_PAY_RESET } from '../../constants/orderConstants'
 
 const Header = ({ show, setShow }) => {
   const [theme, setTheme] = useState('light')
@@ -29,6 +30,7 @@ const Header = ({ show, setShow }) => {
     e.preventDefault()
     dispatch(logout())
     dispatch({ type: USER_DETAILS_RESET })
+    dispatch({type:ORDER_PAY_RESET})
   }
 
   const handleClick = () => {

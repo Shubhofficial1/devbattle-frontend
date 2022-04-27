@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import Details from '../../components/Details/Details'
-import Security from '../../components/Security/Security'
+import Orders from '../../components/Orders/Orders'
 import Settings from '../../components/Settings/Settings'
-import './SecurityScreen.css'
+import './OrdersScreen.css'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-const SecurityScreen = () => {
+const OrdersScreen = () => {
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
   const history = useNavigate()
@@ -15,15 +15,16 @@ const SecurityScreen = () => {
       history('/')
     }
   }, [history, userInfo])
+
   return (
-    <div className='security'>
-      <div className='security_container'>
+    <div className='orders'>
+      <div className='orders_container'>
         <Settings />
-        <Security />
+        <Orders />
         <Details />
       </div>
     </div>
   )
 }
 
-export default SecurityScreen
+export default OrdersScreen

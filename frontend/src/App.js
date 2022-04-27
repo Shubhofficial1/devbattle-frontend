@@ -5,7 +5,7 @@ import HomeScreen from './screens/HomeScreen/HomeScreen'
 import { Routes, Route } from 'react-router-dom'
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
 import AccountScreen from './screens/AccountScreen/AccountScreen'
-import SecurityScreen from './screens/SecurityScreen/SecurityScreen'
+import OrdersScreen from './screens/OrdersScreen/OrdersScreen'
 import AppearanceScreen from './screens/AppearanceScreen/AppearanceScreen'
 import NotificationScreen from './screens/NotificationScreen/NotificationScreen'
 import CourseScreen from './screens/CourseScreen/CourseScreen'
@@ -31,7 +31,7 @@ function App() {
           <Route path='/' exact element={<HomeScreen />} />
           <Route path='/profile' element={<ProfileScreen />} />
           <Route path='/account' element={<AccountScreen />} />
-          <Route path='/security' element={<SecurityScreen />} />
+          <Route path='/orders' element={<OrdersScreen />} />
           <Route path='/appearance' element={<AppearanceScreen />} />
           <Route path='/notification' element={<NotificationScreen />} />
           <Route path='/courses' element={<CourseScreen />} />

@@ -14,8 +14,8 @@ const Settings = () => {
         <p>Account</p>
       </Link>
 
-      <Link className='link' to='/security'>
-        <p> Security & Privacy </p>
+      <Link className='link' to='/orders'>
+        <p>Orders</p>
       </Link>
 
       <h1>App Setting</h1>

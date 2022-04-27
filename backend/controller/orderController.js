@@ -44,6 +44,7 @@ const payOrder = asyncHandler(async (req, res) => {
 
     const alreadyEnrolled = await Order.find({ user: req.user._id })
     const found = alreadyEnrolled.find((c) => c.course == course._id)
+
     if (found) {
       res.status(409)
       throw new Error('Already Enrolled')
@@ -52,7 +53,6 @@ const payOrder = asyncHandler(async (req, res) => {
     const newOrder = Order({
       user: req.user._id,
       course: course._id,
-
       paymentMethod: paymentMethod,
       paymentResult: {
         id: razorpayPaymentId,
@@ -61,7 +61,7 @@ const payOrder = asyncHandler(async (req, res) => {
         update_time: Date.now(),
         email_address: req.user.email,
       },
-      totalPrice: amount,
+      paidPrice: amount,
       isPaid: true,
       paidAt: Date.now(),
     })
@@ -73,15 +73,6 @@ const payOrder = asyncHandler(async (req, res) => {
   }
 })
 
-// @desc    Get all Orders
-// @route   GET /api/orders
-// @access  Public
-
-const getOrders = asyncHandler(async (req, res) => {
-  const orders = await Order.find()
-  res.send(orders)
-})
-
 // @desc    Get razorpay key
 // @route   GET /api/orders/razorpay-key
 // @access  Public
@@ -90,4 +81,15 @@ const getRazorpayKey = asyncHandler(async (req, res) => {
   res.send({ key: process.env.RAZORPAY_KEY_ID })
 })
 
-export { checkoutOrder, payOrder, getOrders, getRazorpayKey }
+// @desc    Get Order By Id
+// @route   GET /api/orders/:id
+// @access  Private
+
+const getOrdersById = asyncHandler(async (req, res) => {
+  const orders = await Order.find({ user: req.user._id })
+    .populate('user', 'name email')
+    .populate('course', 'name imageUrl description category price')
+  res.status(200).json(orders)
+})
+
+export { checkoutOrder, payOrder, getRazorpayKey, getOrdersById }
