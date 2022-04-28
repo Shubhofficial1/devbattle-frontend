@@ -87,8 +87,7 @@ const getRazorpayKey = asyncHandler(async (req, res) => {
 
 const getOrdersById = asyncHandler(async (req, res) => {
   const orders = await Order.find({ user: req.user._id })
-    .populate('user', 'name email')
-    .populate('course', 'name imageUrl description category price')
+  .populate('course', 'name imageUrl description category price')
   res.status(200).json(orders)
 })
 

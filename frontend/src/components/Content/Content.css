@@ -7,7 +7,7 @@
   border-radius: var(--border-radius-5);
   display: flex;
   flex-direction: column;
-  margin: 10px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 .profile_header_image {
@@ -57,7 +57,7 @@
 /* profile form */
 
 .profile_form {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .profile_form h1 {
@@ -112,7 +112,7 @@
 .profile_form_row_all textarea {
   padding: 10px;
   margin-top: 10px;
-  min-height: 100px;
+  min-height: 70px;
   border: none;
   outline: none;
   resize: none;
