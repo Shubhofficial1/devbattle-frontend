@@ -5,7 +5,7 @@ import { BsBrightnessHigh } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import { logout } from '../../actions/userActions'
 import { useSelector, useDispatch } from 'react-redux'
-import { USER_DETAILS_RESET } from '../../constants/userConstants'
+import { USERS_LIST_RESET, USER_DETAILS_RESET } from '../../constants/userConstants'
 import {
   ORDERS_DETAIL_RESET,
   ORDER_PAY_RESET,
@@ -35,6 +35,7 @@ const Header = ({ show, setShow }) => {
     dispatch({ type: USER_DETAILS_RESET })
     dispatch({ type: ORDER_PAY_RESET })
     dispatch({ type: ORDERS_DETAIL_RESET })
+    dispatch({type:USERS_LIST_RESET})
   }
 
   const handleClick = () => {
