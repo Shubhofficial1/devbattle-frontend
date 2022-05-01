@@ -14,7 +14,7 @@ import CourseDetailsScreen from './screens/CourseDetailsScreen/CourseDetailsScre
 import LoginModal from './components/LoginModal/LoginModal'
 import UsersScreen from './screens/admin/UsersScreen/UsersScreen'
 import UserEditScreen from './screens/admin/UserEditScreen/UserEditScreen'
-
+import CoursesScreen from './screens/admin/CoursesScreen/CoursesScreen'
 function App() {
   const [show, setShow] = useState(false)
 
@@ -41,6 +41,7 @@ function App() {
           <Route path='/pricing' element={<PricingScreen />} />
           <Route path='/admin/users' element={<UsersScreen />} />
           <Route path='/admin/users/edit/:id' element={<UserEditScreen />} />
+          <Route path='/admin/courses' element={<CoursesScreen />} />
         </Routes>
       </main>
       <Footer />

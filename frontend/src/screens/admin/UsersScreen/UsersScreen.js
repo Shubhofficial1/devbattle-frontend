@@ -59,10 +59,11 @@ const UsersScreen = () => {
           <table className='users__table'>
             <thead>
               <tr className='table__head'>
-                <td className='table__id'>Id</td>
-                <td>Name</td>
-                <td>Email</td>
+                <td className='table__id'>ID</td>
+                <td>NAME</td>
+                <td>EMAIL</td>
                 <td>ROLE</td>
+                <td>ACTION</td>
               </tr>
             </thead>
             <tbody>
@@ -75,15 +76,18 @@ const UsersScreen = () => {
                     <div
                       className={`${user.isAdmin === true ? 'admin' : 'user'}`}
                     >
-                      {user.isAdmin === false ? 'USERS' : 'ADMIN'}
+                      {user.isAdmin === false ? 'USERS' : ''}
+                      {user.isAdmin === true ? 'ADMIN' : ''}
                     </div>
+                  </td>
+                  <td className='user__action'>
                     <AiOutlineDelete
                       className='user__delete__button'
                       onClick={() => handleDelete(user._id)}
                     />
                     <BiEdit
                       className='user__edit__button'
-                      onClick={()=>handleEdit(user._id)}
+                      onClick={() => handleEdit(user._id)}
                     />
                   </td>
                 </tr>

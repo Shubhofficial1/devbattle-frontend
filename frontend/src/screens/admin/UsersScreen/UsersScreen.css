@@ -50,21 +50,28 @@
 }
 
 .user__role {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .admin {
   background-color: #ff5f00;
-  padding: 2px 5px;
+  padding: 5px 10px;
   border-radius: var(--border-radius-3);
+  cursor: pointer;
+  width: fit-content;
 }
 
 .user {
   background-color: #7fb5ff;
-  padding: 2px 5px;
+  padding: 5px 10px;
   border-radius: var(--border-radius-3);
+  cursor: pointer;
+  width: fit-content;
+}
+
+.user__action {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .user__delete__button {

@@ -65,7 +65,7 @@ const registerUser = AsyncHandler(async (req, res) => {
 // @access  Private
 
 const getUserProfile = AsyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id)
+  const user = await User.findById(req.user._id).select('-password')
 
   if (user) {
     res.json({
@@ -123,7 +123,7 @@ const getUsers = AsyncHandler(async (req, res) => {
 // @access  Private/Admin
 
 const deleteUserById = AsyncHandler(async (req, res) => {
-  const user = await User.findById(req.params.id)
+  const user = await User.findById(req.params.id).select('-password')
 
   if (user) {
     await user.remove()
@@ -153,12 +153,13 @@ const getUserById = AsyncHandler(async (req, res) => {
 // @access  Private/Admin
 
 const updateUserById = AsyncHandler(async (req, res) => {
-  const user = await User.findById(req.params.id)
-
+  const user = await User.findById(req.params.id).select('-password')
   if (user) {
     user.name = req.body.name || user.name
     user.email = req.body.email || user.email
-    user.isAdmin = req.body.isAdmin || user.isAdmin
+    user.isAdmin = req.body.isAdmin
+    // When using postman, uncomment below : below was the bug which was hindering isAdminUpdate
+    // user.isAdmin = req.body.isAdmin || user.isAdmin
 
     const updatedUser = await user.save()
 
