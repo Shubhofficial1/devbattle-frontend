@@ -15,6 +15,7 @@ import {
   ORDERS_DETAIL_RESET,
   ORDER_PAY_RESET,
 } from '../../constants/orderConstants'
+import { COURSE_CREATE_RESET } from '../../constants/coursesConstants'
 
 const Header = ({ show, setShow }) => {
   const [theme, setTheme] = useState('light')
@@ -43,6 +44,7 @@ const Header = ({ show, setShow }) => {
     dispatch({ type: USERS_LIST_RESET })
     dispatch({ type: USER_REGISTER_RESET })
     dispatch({ type: USER_DETAILS_ADMIN_RESET })
+    dispatch({ type: COURSE_CREATE_RESET })
   }
 
   const handleClick = () => {

@@ -38,7 +38,7 @@ const CoursesScreen = () => {
 
   const handleCreateCourse = (e) => {
     e.preventDefault()
-    history('/admin/create-product')
+    history('/admin/create-course')
   }
 
   const handleDelete = (id) => {

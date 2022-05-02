@@ -1,4 +1,4 @@
-.user__edit__container {
+.course__create {
   padding: 10px 20px;
   max-width: 1400px;
   width: 100%;
@@ -6,37 +6,25 @@
   flex-direction: column;
 }
 
-.user__edit__goback {
-  border: none;
-  outline: none;
-  width: 80px;
-  padding: 10px;
-  border-radius: var(--border-radius-3);
-  background-color: var(--CARD-700);
-  cursor: pointer;
-  color: white;
-  font-size: 14px;
-}
-
-.user__edit__container h1 {
+.course__create h1 {
   font-size: 24px;
   font-weight: 700;
   color: var(--text-dark);
   padding: 10px 0px;
 }
 
-.user__edit__container p {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-dark);
-}
-
-.user__edit__form {
+.course__create__form {
   display: flex;
   flex-direction: column;
 }
 
-.user__edit__container form input {
+.course__create__form p {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+.course__create__form input {
   padding: 15px 20px;
   border: none;
   outline: none;
@@ -49,15 +37,7 @@
   font-size: 14px;
 }
 
-.user__edit__row {
-  display: flex;
-}
-
-.isAdmin__checkbox {
-  cursor: pointer;
-}
-
-.user1__edit__button {
+.course__create__button {
   padding: 10px;
   border: none;
   outline: none;
@@ -71,6 +51,6 @@
   cursor: pointer;
 }
 
-.user1__edit__button:disabled {
+.course__create__button:disabled {
   background-color: var(--accent-light);
 }

@@ -3,6 +3,9 @@ import {
   COURSES_LIST_FAIL,
   COURSES_LIST_REQUEST,
   COURSES_LIST_SUCCESS,
+  COURSE_CREATE_FAIL,
+  COURSE_CREATE_REQUEST,
+  COURSE_CREATE_SUCCESS,
   COURSE_DELETE_FAIL,
   COURSE_DELETE_REQUEST,
   COURSE_DELETE_SUCCESS,
@@ -71,6 +74,35 @@ export const deleteCourse = (id) => async (dispatch, getState) => {
   } catch (error) {
     dispatch({
       type: COURSE_DELETE_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
+}
+
+export const createCourse = (course) => async (dispatch, getState) => {
+  try {
+    dispatch({ type: COURSE_CREATE_REQUEST })
+
+    const {
+      userLogin: { userInfo },
+    } = getState()
+
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${userInfo.token}`,
+      },
+    }
+    await axios.post(`/api/courses`, course, config)
+    dispatch({
+      type: COURSE_CREATE_SUCCESS,
+    })
+  } catch (error) {
+    dispatch({
+      type: COURSE_CREATE_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message
