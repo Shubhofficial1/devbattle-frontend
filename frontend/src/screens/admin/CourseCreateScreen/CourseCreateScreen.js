@@ -6,6 +6,9 @@ import { createCourse } from '../../../actions/coursesActions'
 import Loader from '../../../components/Loader/Loader'
 import Message from '../../../components/Message/Message'
 import { COURSE_CREATE_RESET } from '../../../constants/coursesConstants'
+import StackContainer from '../../../components/StackContainer/StackContainer'
+import NoteContainer from '../../../components/NoteContainer/NoteContainer'
+import FeatureContainer from '../../../components/FeatureContainer/FeatureContainer'
 
 const CourseCreateScreen = () => {
   const [name, setName] = useState('')
@@ -15,6 +18,15 @@ const CourseCreateScreen = () => {
   const [category, setCategory] = useState('')
   const [price, setPrice] = useState(0)
   const [language, setLanguage] = useState('')
+  const [stackInput, setStackInput] = useState('')
+  const [stackImageUrl, setStackImageUrl] = useState('')
+  const [stacks, setStacks] = useState([])
+
+  const [noteInput, setNoteInput] = useState('')
+  const [notes, setNotes] = useState([])
+
+  const [featureInput, setFeatureInput] = useState('')
+  const [features, setFeatures] = useState([])
 
   const dispatch = useDispatch()
   const history = useNavigate()
@@ -46,6 +58,41 @@ const CourseCreateScreen = () => {
     }
   }, [history, userInfo, dispatch, successCreate])
 
+  const addStackToList = (e) => {
+    e.preventDefault()
+    setStacks([
+      ...stacks,
+      {
+        name: stackInput,
+        imageUrl: stackImageUrl,
+      },
+    ])
+    setStackInput('')
+    setStackImageUrl('')
+  }
+
+  const addNoteToList = (e) => {
+    e.preventDefault()
+    setNotes([
+      ...notes,
+      {
+        text: noteInput,
+      },
+    ])
+    setNoteInput('')
+  }
+
+  const addFeatureToList = (e) => {
+    e.preventDefault()
+    setFeatures([
+      ...features,
+      {
+        text: featureInput,
+      },
+    ])
+    setFeatureInput('')
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(
@@ -57,6 +104,9 @@ const CourseCreateScreen = () => {
         category,
         price,
         language,
+        stacks,
+        notes,
+        features,
       })
     )
   }
@@ -126,6 +176,90 @@ const CourseCreateScreen = () => {
                 setLanguage(e.target.value)
               }}
             />
+
+            <p>Tech Stack</p>
+            <input
+              placeholder='Enter Stack To be added in array'
+              value={stackInput}
+              onChange={(e) => {
+                setStackInput(e.target.value)
+              }}
+            />
+            <p>Tech Stack Image Url</p>
+            <input
+              placeholder='Enter Stack To be added in array'
+              value={stackImageUrl}
+              onChange={(e) => {
+                setStackImageUrl(e.target.value)
+              }}
+            />
+            <button
+              className='course__create__button'
+              disabled={!stackInput && !stackImageUrl}
+              onClick={addStackToList}
+            >
+              + Stack
+            </button>
+            {stacks?.map((stack) => (
+              <StackContainer
+                stack={stack}
+                stacks={stacks}
+                setStacks={setStacks}
+                key={stack.name}
+              />
+            ))}
+
+            <p>Add Note</p>
+            <input
+              placeholder='Enter note To be added in array'
+              value={noteInput}
+              onChange={(e) => {
+                setNoteInput(e.target.value)
+              }}
+            />
+
+            <button
+              className='course__create__button'
+              disabled={!noteInput}
+              onClick={addNoteToList}
+            >
+              + Notes
+            </button>
+
+            {notes?.map((note) => (
+              <NoteContainer
+                note={note}
+                notes={notes}
+                setNotes={setNotes}
+                key={note.text}
+              />
+            ))}
+
+            <p>Features</p>
+            <input
+              placeholder='Enter Features To be added in array'
+              value={featureInput}
+              onChange={(e) => {
+                setFeatureInput(e.target.value)
+              }}
+            />
+            <button
+              className='course__create__button'
+              disabled={!featureInput}
+              onClick={addFeatureToList}
+            >
+              + Features
+            </button>
+
+            {features?.map((feature) => (
+              <FeatureContainer
+                key={feature.text}
+                feature={feature}
+                features={features}
+                setFeatures={setFeatures}
+              />
+            ))}
+
             <button className='course__create__button' type='submit'>
               Submit
             </button>

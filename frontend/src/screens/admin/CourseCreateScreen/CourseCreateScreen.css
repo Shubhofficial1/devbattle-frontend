@@ -19,16 +19,16 @@
 }
 
 .course__create__form p {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-dark);
-  }
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
 
 .course__create__form input {
   padding: 15px 20px;
   border: none;
   outline: none;
-  width: 30%;
+  width: 50%;
   color: var(--text-dark-light);
   background-color: var(--CARD-700);
   border-radius: var(--border-radius-3);
@@ -53,4 +53,16 @@
 
 .course__create__button:disabled {
   background-color: var(--accent-light);
+}
+
+@media screen and (max-width: 700px) {
+  .course__create__form input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .course__create__form input {
+    width: 100%;
+  }
 }

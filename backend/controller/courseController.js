@@ -48,8 +48,19 @@ const deleteCourse = asyncHandler(async (req, res) => {
 // @access  Private/Admin
 
 const createCourse = asyncHandler(async (req, res) => {
-  const { name, imageUrl, videoUrl, description, category, price, language } =
-    req.body
+  const {
+    name,
+    imageUrl,
+    videoUrl,
+    description,
+    category,
+    price,
+    language,
+    stacks,
+    notes,
+    features,
+  } = req.body
+
   const course = new Course({
     user: req.user._id,
     name,
@@ -59,6 +70,9 @@ const createCourse = asyncHandler(async (req, res) => {
     category,
     price,
     language,
+    stacks,
+    notes,
+    features,
   })
 
   await course.save()
