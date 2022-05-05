@@ -6,6 +6,7 @@ import courseRoutes from './routes/courseRoutes.js'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import { errorHandler, notFound } from './middleware/errorMiddleware.js'
+import morgan from 'morgan'
 
 // Dotenv Configuration
 dotenv.config()
@@ -15,6 +16,10 @@ connectDb()
 
 // Initialize App
 const app = express()
+
+if (process.env.MODE === 'development') {
+  app.use(morgan('dev'))
+}
 
 app.use(express.json())
 
