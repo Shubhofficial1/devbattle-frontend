@@ -7,6 +7,7 @@ import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import { errorHandler, notFound } from './middleware/errorMiddleware.js'
 import morgan from 'morgan'
+import path from 'path'
 
 // Dotenv Configuration
 dotenv.config()
@@ -24,14 +25,23 @@ if (process.env.MODE === 'development') {
 app.use(express.json())
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('api is running...')
-})
 
 app.use('/api/courses', courseRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/orders', orderRoutes)
 
+const __dirname = path.resolve()
+if (process.env.MODE == 'production') {
+  app.use(express.static(path.join(__dirname, '/frontend/build')))
+
+  app.get('*', (req, res) =>
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+  )
+} else {
+  app.get('/', (req, res) => {
+    res.send('api is running...')
+  })
+}
 // Middlewares
 
 app.use(notFound)
@@ -39,7 +49,7 @@ app.use(errorHandler)
 
 // ENV
 const PORT = process.env.PORT || 5000
-const MODE = process.env.MODE || 'Development'
+const MODE = process.env.MODE || 'development'
 
 // Listener
 app.listen(PORT, () => {
