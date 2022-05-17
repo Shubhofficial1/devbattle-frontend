@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
-import './NotificationScreen.css'
-import Details from '../../components/Details/Details'
-import Settings from '../../components/Settings/Settings'
-import Notification from '../../components/Notification/Notification'
+import './AccountScreen.css'
+import Account from '../../../components/Account/Account'
+import Details from '../../../components/Details/Details'
+import Settings from '../../../components/Settings/Settings'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-const NotificationScreen = () => {
+
+const AccountScreen = () => {
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
   const history = useNavigate()
@@ -16,14 +17,14 @@ const NotificationScreen = () => {
     }
   }, [history, userInfo])
   return (
-    <div className='notification'>
-      <div className='notification_container'>
+    <div className='account'>
+      <div className='account_container'>
         <Settings />
-        <Notification />
+        <Account />
         <Details />
       </div>
     </div>
   )
 }
 
-export default NotificationScreen
+export default AccountScreen

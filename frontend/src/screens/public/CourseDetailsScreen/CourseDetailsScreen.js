@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react'
 import './CourseDetailsScreen.css'
-import { useNavigate } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { FaRegHeart } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
-import { listCourseDetails } from '../../actions/coursesActions'
-import { checkoutOrder } from '../../actions/orderActions'
-import Loader from '../../components/Loader/Loader'
-import Message from '../../components/Message/Message'
+import { listCourseDetails } from '../../../actions/coursesActions'
+import { checkoutOrder } from '../../../actions/orderActions'
+import Loader from '../../../components/Loader/Loader'
+import Message from '../../../components/Message/Message'
 
 const CourseDetailsScreen = () => {
   const { id } = useParams()

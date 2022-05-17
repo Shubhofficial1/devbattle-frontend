@@ -1,8 +1,8 @@
 import React from 'react'
 import './HomeScreen.css'
-import HomeContainer from '../../components/HomeContainer/HomeContainer'
-import HomeCard from '../../components/HomeCard/HomeCard'
-import ProductContainer from '../../components/ProductContainer/ProductContainer'
+import HomeContainer from '../../../components/HomeContainer/HomeContainer'
+import HomeCard from '../../../components/HomeCard/HomeCard'
+import ProductContainer from '../../../components/ProductContainer/ProductContainer'
 
 const HomeScreen = () => {
   return (

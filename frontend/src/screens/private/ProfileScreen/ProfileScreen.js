@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
-import Details from '../../components/Details/Details'
-import Orders from '../../components/Orders/Orders'
-import Settings from '../../components/Settings/Settings'
-import './OrdersScreen.css'
+import './ProfileScreen.css'
+import Content from '../../../components/Content/Content'
+import Details from '../../../components/Details/Details'
+import Settings from '../../../components/Settings/Settings'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-const OrdersScreen = () => {
+
+const ProfileScreen = () => {
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
   const history = useNavigate()
@@ -15,16 +16,15 @@ const OrdersScreen = () => {
       history('/')
     }
   }, [history, userInfo])
-
   return (
-    <div className='orders'>
-      <div className='orders_container'>
+    <div className='profile'>
+      <div className='profile_container'>
         <Settings />
-        <Orders />
+        <Content />
         <Details />
       </div>
     </div>
   )
 }
 
-export default OrdersScreen
+export default ProfileScreen
