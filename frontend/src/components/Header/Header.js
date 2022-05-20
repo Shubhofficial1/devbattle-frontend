@@ -13,6 +13,7 @@ import {
 } from '../../constants/userConstants'
 import {
   ORDERS_DETAIL_RESET,
+  ORDERS_LIST_RESET,
   ORDER_PAY_RESET,
 } from '../../constants/orderConstants'
 import { COURSE_CREATE_RESET } from '../../constants/coursesConstants'
@@ -41,6 +42,7 @@ const Header = ({ show, setShow }) => {
     dispatch({ type: USER_DETAILS_RESET })
     dispatch({ type: ORDER_PAY_RESET })
     dispatch({ type: ORDERS_DETAIL_RESET })
+    dispatch({ type: ORDERS_LIST_RESET })
     dispatch({ type: USERS_LIST_RESET })
     dispatch({ type: USER_REGISTER_RESET })
     dispatch({ type: USER_DETAILS_ADMIN_RESET })

@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
 import './CourseScreen.css'
 import Rating from '../../../components/Rating/Rating'
+import Loader from '../../../components/Loader/Loader'
+import Message from '../../../components/Message/Message'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { listCourses } from '../../../actions/coursesActions'
-import Loader from '../../../components/Loader/Loader'
-import Message from '../../../components/Message/Message'
+
 const CourseScreen = () => {
   const dispatch = useDispatch()
 

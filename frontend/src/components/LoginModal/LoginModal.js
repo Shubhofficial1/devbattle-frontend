@@ -11,7 +11,7 @@ const LoginModal = (props) => {
 
   const [registerName, setRegisterName] = useState('')
   const [registerEmail, setRegisterEmail] = useState('')
-  const [registerPassword, setregisterPassword] = useState('')
+  const [registerPassword, setRegisterPassword] = useState('')
 
   const [showLoginBody, setShowLoginBody] = useState(true)
   const dispatch = useDispatch()
@@ -37,7 +37,7 @@ const LoginModal = (props) => {
     dispatch(register(registerName, registerEmail, registerPassword))
     setRegisterName('')
     setRegisterEmail('')
-    setregisterPassword('')
+    setRegisterPassword('')
     props.setShow(false)
   }
 
@@ -131,7 +131,7 @@ const LoginModal = (props) => {
               <input
                 value={registerPassword}
                 type='password'
-                onChange={(e) => setregisterPassword(e.target.value)}
+                onChange={(e) => setRegisterPassword(e.target.value)}
                 className='modal__password noselect'
                 placeholder='Enter your password'
               ></input>

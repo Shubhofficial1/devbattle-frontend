@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { getOrdersDetails } from '../../actions/orderActions'
 import Loader from '../Loader/Loader'
 import Message from '../Message/Message'
-const Security = () => {
+const Orders = () => {
   const userLogin = useSelector((state) => state.userLogin)
 
   const { userInfo } = userLogin
@@ -57,4 +57,4 @@ const Security = () => {
   )
 }
 
-export default Security
+export default Orders

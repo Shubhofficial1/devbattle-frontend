@@ -32,31 +32,21 @@ function App() {
           setShow={setShow}
         />
         <Routes>
-          {/* public --done */}
-          <Route path='/' exact element={<HomeScreen />} />
-          {/* private --done */}
-          <Route path='/profile' element={<ProfileScreen />} />
-          {/* private --done*/}
-          <Route path='/account' element={<AccountScreen />} />
-          {/* private --done*/}
-          <Route path='/orders' element={<OrdersScreen />} />
-          {/* private */}
-          <Route path='/appearance' element={<AppearanceScreen />} />
-          {/* private */}
-          <Route path='/notification' element={<NotificationScreen />} />
-          {/* public --done*/}
-          <Route path='/courses' element={<CourseScreen />} />
-          {/* public --done*/}
-          <Route path='/courses/:id' element={<CourseDetailsScreen />} />
           {/* public */}
+          <Route path='/' exact element={<HomeScreen />} />
+          <Route path='/notification' element={<NotificationScreen />} />
+          <Route path='/courses' element={<CourseScreen />} />
+          <Route path='/courses/:id' element={<CourseDetailsScreen />} />
           <Route path='/pricing' element={<PricingScreen />} />
-          {/* admin --done */}
+          {/* private */}
+          <Route path='/profile' element={<ProfileScreen />} />
+          <Route path='/account' element={<AccountScreen />} />
+          <Route path='/orders' element={<OrdersScreen />} />
+          <Route path='/appearance' element={<AppearanceScreen />} />
+          {/* admin */}
           <Route path='/admin/users' element={<UsersScreen />} />
-          {/* admin --done*/}
           <Route path='/admin/users/edit/:id' element={<UserEditScreen />} />
-          {/* admin --done*/}
           <Route path='/admin/courses' element={<CoursesScreen />} />
-          {/* admin --done*/}
           <Route path='/admin/create-course' element={<CourseCreateScreen />} />
         </Routes>
       </main>

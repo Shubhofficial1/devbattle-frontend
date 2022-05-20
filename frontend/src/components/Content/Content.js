@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import './Content.css'
 import { AiFillDelete } from 'react-icons/ai'
-import { useSelector, useDispatch } from 'react-redux'
-import { getUserDetails, updateUserProfile } from '../../actions/userActions.js'
-import { useNavigate } from 'react-router-dom'
 import Message from '../Message/Message.js'
 import Loader from '../Loader/Loader.js'
+import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 import { USER_UPDATE_PROFILE_RESET } from '../../constants/userConstants'
+import { getUserDetails, updateUserProfile } from '../../actions/userActions.js'
 
 const Content = () => {
   const [name, setName] = useState('')

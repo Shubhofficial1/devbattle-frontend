@@ -86,9 +86,20 @@ const getRazorpayKey = asyncHandler(async (req, res) => {
 // @access  Private
 
 const getOrdersById = asyncHandler(async (req, res) => {
-  const orders = await Order.find({ user: req.user._id })
-  .populate('course', 'name imageUrl description category price')
+  const orders = await Order.find({ user: req.user._id }).populate(
+    'course',
+    'name imageUrl description category price'
+  )
   res.status(200).json(orders)
 })
 
-export { checkoutOrder, payOrder, getRazorpayKey, getOrdersById }
+const getOrdersList = asyncHandler(async (req, res) => {
+  const orders = await Order.find({ user: req.user._id }).populate('course')
+  let ordersList = []
+  const order = orders.map((order) => {
+    ordersList.push(order.course._id)
+  })
+  res.status(200).json(ordersList)
+})
+
+export { checkoutOrder, payOrder, getRazorpayKey, getOrdersById, getOrdersList }

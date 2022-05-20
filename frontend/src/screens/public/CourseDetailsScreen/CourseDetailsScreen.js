@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import './CourseDetailsScreen.css'
-import { useNavigate, useParams } from 'react-router-dom'
 import { FaRegHeart } from 'react-icons/fa'
+import Loader from '../../../components/Loader/Loader'
+import Message from '../../../components/Message/Message'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { listCourseDetails } from '../../../actions/coursesActions'
 import { checkoutOrder } from '../../../actions/orderActions'
-import Loader from '../../../components/Loader/Loader'
-import Message from '../../../components/Message/Message'
+import { getOrdersList } from '../../../actions/orderActions'
 
 const CourseDetailsScreen = () => {
   const { id } = useParams()
@@ -20,7 +21,11 @@ const CourseDetailsScreen = () => {
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
 
+  const ordersList = useSelector((state) => state.ordersList)
+  const { ordersList: ordersListArray } = ordersList
+
   useEffect(() => {
+    dispatch(getOrdersList())
     dispatch(listCourseDetails(id))
   }, [dispatch, id])
 
@@ -33,6 +38,14 @@ const CourseDetailsScreen = () => {
       history('/')
     } else {
       dispatch(checkoutOrder(course))
+    }
+  }
+
+  const handleDashboard = () => {
+    if (!userInfo) {
+      history('/')
+    } else {
+      history(`/dashboard/${id}`)
     }
   }
 
@@ -94,15 +107,30 @@ const CourseDetailsScreen = () => {
               ))}
 
               <div className='course__purchase__container'>
-                <button
-                  onClick={handlePayment}
-                  className='course__buy__button noselect'
-                >
-                  Buy Now
-                </button>
-                <button className='course__wishlist__button noselect'>
-                  <FaRegHeart />
-                </button>
+                {ordersListArray?.includes(id) && (
+                  <>
+                    <button
+                      onClick={handleDashboard}
+                      className='course__buy__button noselect'
+                    >
+                      Go to course
+                    </button>
+                  </>
+                )}
+
+                {!ordersListArray?.includes(id) && (
+                  <>
+                    <button
+                      onClick={handlePayment}
+                      className='course__buy__button noselect'
+                    >
+                      Buy Now
+                    </button>
+                    <button className='course__wishlist__button noselect'>
+                      <FaRegHeart />
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import {
   courseDetailsReducer,
   coursesListReducer,
   courseDeleteReducer,
-  courseCreateReducer
+  courseCreateReducer,
 } from './reducers/coursesReducers'
 import {
   userLoginReducer,
@@ -18,19 +18,24 @@ import {
   userUpdateReducer,
 } from './reducers/userReducers'
 
-import { orderPayReducer, ordersDetailReducer } from './reducers/orderReducers'
+import {
+  orderPayReducer,
+  ordersDetailReducer,
+  ordersListReducer,
+} from './reducers/orderReducers'
 
 const reducer = combineReducers({
   coursesList: coursesListReducer,
   courseDetails: courseDetailsReducer,
   courseDelete: courseDeleteReducer,
-  courseCreate:courseCreateReducer,
+  courseCreate: courseCreateReducer,
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
   userDetails: userDetailsReducer,
   userUpdateProfile: userUpdateProfileReducer,
   orderPay: orderPayReducer,
   ordersDetail: ordersDetailReducer,
+  ordersList: ordersListReducer,
   usersList: usersListReducer,
   userDelete: userDeleteReducer,
   userDetailsAdmin: userDetailsAdminReducer,
