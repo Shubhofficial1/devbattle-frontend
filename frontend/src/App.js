@@ -16,6 +16,7 @@ import UsersScreen from './screens/admin/UsersScreen/UsersScreen'
 import UserEditScreen from './screens/admin/UserEditScreen/UserEditScreen'
 import CoursesScreen from './screens/admin/CoursesScreen/CoursesScreen'
 import CourseCreateScreen from './screens/admin/CourseCreateScreen/CourseCreateScreen'
+import DashBoardScreen from './screens/private/DashBoardScreen/DashBoardScreen'
 
 function App() {
   const [show, setShow] = useState(false)
@@ -43,6 +44,8 @@ function App() {
           <Route path='/account' element={<AccountScreen />} />
           <Route path='/orders' element={<OrdersScreen />} />
           <Route path='/appearance' element={<AppearanceScreen />} />
+          <Route path='/dashboard/:id' element={<DashBoardScreen />} />
+
           {/* admin */}
           <Route path='/admin/users' element={<UsersScreen />} />
           <Route path='/admin/users/edit/:id' element={<UserEditScreen />} />

@@ -19,6 +19,14 @@ import {
 import { COURSE_CREATE_RESET } from '../../constants/coursesConstants'
 
 const Header = ({ show, setShow }) => {
+  // const [showNav, setShowNav] = useState(true)
+  // const controlNav = () => {
+  //   if (window.scrollY > 250) {
+  //     setShowNav(true)
+  //   } else {
+  //     setShowNav(false)
+  //   }
+  // }
   const [theme, setTheme] = useState('light')
 
   const history = useNavigate()
@@ -34,6 +42,12 @@ const Header = ({ show, setShow }) => {
       localStorage.getItem('theme')
     )
     setTheme(localStorage.getItem('theme'))
+
+    // window.addEventListener('scroll', controlNav)
+
+    // return () => {
+    //   window.removeEventListener('scroll', controlNav)
+    // }
   }, [])
 
   const handleLogout = (e) => {
@@ -88,7 +102,7 @@ const Header = ({ show, setShow }) => {
 
   return (
     <header>
-      <div className='header_container noselect'>
+      <div className={`header_container noselect `}>
         <div className='header_triplebar'>
           <BsThreeDots />
         </div>

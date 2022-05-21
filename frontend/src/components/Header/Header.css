@@ -3,7 +3,17 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
+  /* position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  transition-timing-function: ease-in;
+  transition: 1s; */
 }
+
+/* .showNav {
+  display: none !important;
+} */
 
 .header_container {
   height: 70px;

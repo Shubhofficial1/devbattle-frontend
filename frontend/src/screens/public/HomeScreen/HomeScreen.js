@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './HomeScreen.css'
 import HomeContainer from '../../../components/HomeContainer/HomeContainer'
 import HomeCard from '../../../components/HomeCard/HomeCard'
