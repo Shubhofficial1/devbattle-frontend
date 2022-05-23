@@ -74,7 +74,7 @@ p,
   --CARD-300: #f6f9fc;
   --CARD-400: #f6f9fc;
   --CARD-500: #f6f9fc;
-  --CARD-600: #323d4d;
+  --CARD-600: rgb(50, 61, 77);
   --CARD-700: #242c37;
   --CARD-800: #f6f9fc;
   --CARD-900: #c1c4c7;
@@ -120,6 +120,31 @@ p,
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: rgba(50, 61, 77, 0.8);
+  color: #fff;
+  text-align: center;
+  font-size: 8px;
+  padding: 5px;
+  border-radius: 2px;
+
+  position: absolute;
+  top: 45px;
+  left: 50px;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+} */
 
 /* 
 :root {

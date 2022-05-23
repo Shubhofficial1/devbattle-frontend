@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './DashBoardScreen.css'
+// import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
+
 const DashBoardScreen = () => {
   const videos = [
     {
-      name: 'Section 1. Welcome to the Course',
+      name: ' Welcome to the Course',
       contents: [
         {
           name: '1. Course Introduction',
@@ -35,7 +37,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 2. HTTP Intro,Headers,Body,Status Codes',
+      name: ' HTTP Intro,Headers,Body,Status Codes,And More',
       contents: [
         {
           name: '1. HTTP & Node Http Module',
@@ -64,7 +66,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 3. Dont Want to Type',
+      name: ' Dont Want to Type',
       contents: [
         {
           name: '1. Course Introduction',
@@ -93,7 +95,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 4. Emotional Damage',
+      name: ' Emotional Damage',
       contents: [
         {
           name: '1. Course Introduction',
@@ -122,7 +124,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 5. Lets Do It!',
+      name: ' Lets Do It!',
       contents: [
         {
           name: '1.Course Introduction',
@@ -151,7 +153,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 6. Working On Css',
+      name: ' Working On Css',
       contents: [
         {
           name: '1.Course Introduction',
@@ -180,7 +182,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 7. Welcome to the Course',
+      name: ' Welcome to the Course',
       contents: [
         {
           name: '1.Course Introduction',
@@ -209,7 +211,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 8. HTTP Intro,Headers,Body,Status Codes',
+      name: ' HTTP Intro,Headers,Body,Status Codes',
       contents: [
         {
           name: '1.HTTP & Node Http Module',
@@ -238,7 +240,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 9. Dont Want to Type',
+      name: ' Dont Want to Type',
       contents: [
         {
           name: '1.Course Introduction',
@@ -267,7 +269,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 10. Emotional Damage',
+      name: ' Emotional Damage',
       contents: [
         {
           name: '1.Course Introduction',
@@ -296,7 +298,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 11. Lets Do It!',
+      name: ' Lets Do It!',
       contents: [
         {
           name: '1.Course Introduction',
@@ -325,7 +327,7 @@ const DashBoardScreen = () => {
       ],
     },
     {
-      name: 'Section 12. Working On Css',
+      name: 'Working On Css',
       contents: [
         {
           name: '1.Course Introduction',
@@ -374,12 +376,6 @@ const DashBoardScreen = () => {
     <div className='dashboard'>
       <div className='dashboard__container'>
         <div className='dashboard__left'>
-          {/* <iframe
-            title='Youtube player'
-            className='dashboard__video'
-            frameborder='0'
-            src={`https://www.youtube.com/embed/5HSoS7x8VP8`}
-          ></iframe> */}
           <iframe
             title='video'
             className='dashboard__video'
@@ -388,7 +384,6 @@ const DashBoardScreen = () => {
             allowFullScreen
             background
           ></iframe>
-          {/* <p>{currentVideo}</p> */}
         </div>
         <div className='dashboard__right'>
           <div className='right__heading'>
@@ -396,27 +391,31 @@ const DashBoardScreen = () => {
           </div>
           {videos.map((video, idx) => (
             <div key={idx}>
-              <button
+              <div
                 onClick={() => {
                   toggle(idx)
                 }}
                 className='videoCard__container noselect'
               >
-                <h1>{video.name}</h1>
-              </button>
+                <h1>
+                  {'Section '}
+                  {idx + 1}
+                  {' : '}
+                  {video.name}
+                </h1>
+              </div>
               <div
-                className={`noselect contentCard__container ${
+                className={` contentCard__container noselect ${
                   clicked === idx ? 'active' : 'hide'
                 } `}
               >
                 {video.contents.map((content, index) => (
                   <button
                     onClick={() => {
-                      console.log(content.videoLink)
                       setCurrentVideo(content.videoLink)
                     }}
                     key={index}
-                    className={`contentCard `}
+                    className={`contentCard`}
                   >
                     <p>{content.name}</p>
                   </button>
