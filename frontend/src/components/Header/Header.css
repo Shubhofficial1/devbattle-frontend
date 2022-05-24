@@ -16,7 +16,7 @@ header {
 } */
 
 .header_container {
-  height: 70px;
+  height: 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;

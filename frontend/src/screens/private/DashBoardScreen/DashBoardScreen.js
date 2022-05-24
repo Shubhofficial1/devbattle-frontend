@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './DashBoardScreen.css'
-// import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
 
 const DashBoardScreen = () => {
   const videos = [
@@ -359,7 +358,6 @@ const DashBoardScreen = () => {
 
   const [clicked, setClicked] = useState('0')
   let firstVideo = videos[0].contents[0].videoLink
-  console.log(firstVideo)
   const [currentVideo, setCurrentVideo] = useState(firstVideo)
 
   const toggle = (idx) => {

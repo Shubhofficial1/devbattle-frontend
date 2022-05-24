@@ -147,6 +147,10 @@
   border-radius: var(--border-radius-5);
   margin: 78px 20px 20px 20px;
   box-shadow: var(--box-shadow);
+  /* Code for Sticking it to Top */
+  /* position: sticky;
+  top: 20px;
+  left: 0; */
 }
 
 .course__outline__price {

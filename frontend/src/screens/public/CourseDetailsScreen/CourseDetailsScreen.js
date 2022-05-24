@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { listCourseDetails } from '../../../actions/coursesActions'
 import { checkoutOrder } from '../../../actions/orderActions'
 import { getOrdersList } from '../../../actions/orderActions'
+import Faqs from '../../../components/Faqs/Faqs.js'
 
 const CourseDetailsScreen = () => {
   const { id } = useParams()
@@ -95,6 +96,7 @@ const CourseDetailsScreen = () => {
                     </div>
                   </div>
                 </div>
+                <Faqs />
               </div>
             </div>
             <div className='course__outline'>
