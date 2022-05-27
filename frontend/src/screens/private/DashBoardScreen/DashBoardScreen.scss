@@ -1,0 +1,145 @@
+.dashboard {
+  width: 100%;
+}
+
+.dashboard__container {
+  display: grid;
+  grid-template-columns: 11fr 4fr;
+  min-height: 100vh;
+}
+
+.dashboard__left {
+  background-color: var(--CARD-800);
+  height: 180vh;
+
+  .dashboard__left--videoPlayer {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+.dashboard__right {
+  height: 100vh;
+  margin-left: 10px;
+  border-radius: 5px 5px 0px 0px;
+  overflow-y: auto;
+  border-left: 1px solid var(--CARD-800);
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--CARD-900);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--CARD-600);
+  }
+
+  .dashboard__right--sidebarHeader {
+    padding: 10px;
+    height: 52px;
+    background-color: #b983ff;
+    border-radius: 0px 5px 0px 0px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    h2 {
+      font-size: 16px;
+    }
+  }
+}
+
+.sidebar__section {
+  height: 65px;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 15px;
+  background-color: var(--CARD-900);
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+
+  h1 {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--text-dark-light);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &:hover {
+    background-color: #010409;
+    cursor: pointer;
+  }
+}
+
+.section__item {
+  height: 52px;
+  width: 100%;
+  padding: 10px 25px;
+  background-color: var(--CARD-800);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  outline: none;
+
+  p {
+    font-size: 12px;
+    font-weight: 200;
+    text-transform: capitalize;
+    text-align: start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &:hover {
+    background-color: #0d1117;
+    cursor: pointer;
+  }
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .dashboard__left {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .dashboard__container {
+    grid-template-columns: 1fr;
+  }
+  .dashboard__right {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './DashBoardScreen.css'
+import './DashBoardScreen.scss'
 
 const DashBoardScreen = () => {
   const videos = [
@@ -376,44 +376,35 @@ const DashBoardScreen = () => {
         <div className='dashboard__left'>
           <iframe
             title='video'
-            className='dashboard__video'
+            className='dashboard__left--videoPlayer'
             src={currentVideo}
             frameBorder='0'
             allowFullScreen
-            background
           ></iframe>
         </div>
         <div className='dashboard__right'>
-          <div className='right__heading'>
+          <div className='dashboard__right--sidebarHeader'>
             <h2>Course Content</h2>
           </div>
+
           {videos.map((video, idx) => (
             <div key={idx}>
               <div
+                className='sidebar__section'
                 onClick={() => {
                   toggle(idx)
                 }}
-                className='videoCard__container noselect'
               >
-                <h1>
-                  {'Section '}
-                  {idx + 1}
-                  {' : '}
-                  {video.name}
-                </h1>
+                <h1>{`Section  ${idx + 1}  :  ${video.name} `}</h1>
               </div>
-              <div
-                className={` contentCard__container noselect ${
-                  clicked === idx ? 'active' : 'hide'
-                } `}
-              >
+              <div className={`${clicked === idx ? 'active' : 'hide'} `}>
                 {video.contents.map((content, index) => (
                   <button
                     onClick={() => {
                       setCurrentVideo(content.videoLink)
                     }}
                     key={index}
-                    className={`contentCard`}
+                    className={'section__item'}
                   >
                     <p>{content.name}</p>
                   </button>
