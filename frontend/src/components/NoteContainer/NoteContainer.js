@@ -1,5 +1,5 @@
 import React from 'react'
-import './NoteContainer.css'
+import './NoteContainer.scss'
 import { AiOutlineDelete } from 'react-icons/ai'
 const NoteContainer = ({ note, notes, setNotes }) => {
   const handleNoteDelete = (e) => {

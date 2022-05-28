@@ -1,14 +1,14 @@
 .faqs {
   width: 100%;
   height: fit-content;
-}
 
-.faqs h1 {
-  font-size: 24px;
-  font-weight: 600;
-  text-align: start;
-  margin: 20px 0px;
-  color: var(--text-dark-light);
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: start;
+    margin: 20px 0px;
+    color: var(--text-dark-light);
+  }
 }
 
 .faqs__Container {
@@ -28,12 +28,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.faqs__question h1 {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text-dark-light);
+  h1 {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-dark-light);
+  }
 }
 
 .faqs__answer {

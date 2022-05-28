@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './UsersScreen.css'
+import './UsersScreen.scss'
 import { deleteUserById, getUsersList } from '../../../actions/userActions'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'

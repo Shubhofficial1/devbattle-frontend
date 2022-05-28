@@ -23,14 +23,14 @@
   align-items: center;
   background-color: var(--CARD);
   box-shadow: var(--box-shadow);
-}
 
-.product__image img {
-  border-radius: var(--border-radius-5);
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  cursor: pointer;
+  img {
+    border-radius: var(--border-radius-5);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+  }
 }
 
 .product__right {
@@ -38,41 +38,41 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0px 50px;
-}
 
-.product__right h1 {
-  font-size: 22px;
-  font-weight: 400;
-  color: var(--text-dark-light);
-  margin: 15px 0px;
-}
+  h1 {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-dark-light);
+    margin: 15px 0px;
+  }
 
-.product__right p {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text-dark-light);
-  margin: 15px 0px;
-}
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-dark-light);
+    margin: 15px 0px;
+  }
 
-.product__right button {
-  border: none;
-  outline: none;
-  border-radius: var(--border-radius-5);
-  background-color: var(--accent);
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--PURE-WHITE);
-  text-transform: capitalize;
-  margin: 20px 0px;
-  padding: 10px 15px;
-  cursor: pointer;
-  width: 200px;
-  height: 40px;
-  font-family: var(--font-family);
-}
+  button {
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius-5);
+    background-color: var(--accent);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--PURE-WHITE);
+    text-transform: capitalize;
+    margin: 20px 0px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    font-family: var(--font-family);
 
-.product__right button:hover {
-  background-color: var(--accent-light);
+    &:hover {
+      background-color: var(--accent-light);
+    }
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -86,8 +86,4 @@
     grid-template-columns: 1fr;
     margin: 100px 0px;
   }
-
-  /* .product__image {
-    display: none;
-  } */
 }

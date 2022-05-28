@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './NotificationScreen.css'
+import './NotificationScreen.scss'
 import Details from '../../../components/Details/Details'
 import Settings from '../../../components/Settings/Settings'
 import Notification from '../../../components/Notification/Notification'

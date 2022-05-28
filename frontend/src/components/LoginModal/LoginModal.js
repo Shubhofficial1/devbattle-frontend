@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './LoginModal.css'
+import './LoginModal.scss'
 import { AiOutlineClose } from 'react-icons/ai'
 import { login, register } from '../../actions/userActions'
 import { useSelector, useDispatch } from 'react-redux'

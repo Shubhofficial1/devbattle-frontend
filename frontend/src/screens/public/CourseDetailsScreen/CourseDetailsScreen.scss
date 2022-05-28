@@ -35,18 +35,18 @@
 
 .course__overview {
   padding: 10px;
-}
 
-.course__overview h1 {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--text-color);
-}
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+  }
 
-.course__overview p {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text-dark-light);
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-dark-light);
+  }
 }
 
 .course__image {
@@ -90,12 +90,12 @@
   border-radius: var(--border-radius-3);
   padding: 15px 10px;
   box-shadow: var(--box-shadow);
-}
 
-.course__author__container h1 {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text-color);
+  h1 {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color);
+  }
 }
 
 .author__card {
@@ -117,28 +117,27 @@
 
 .card__right {
   margin-left: 20px;
-}
 
-.card__right h2 {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-dark);
-}
+  h2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+  }
 
-.card__right p {
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--text-dark-light);
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-dark-light);
+  }
 }
 
 .author__description {
   padding: 5px 0px;
-}
-
-.author__description p {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text-dark-light);
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-dark-light);
+  }
 }
 
 .course__outline {
@@ -189,10 +188,10 @@
   font-weight: 500;
   border-radius: var(--border-radius-5);
   cursor: pointer;
-}
 
-.course__buy__button:hover {
-  background-color: var(--accent-light);
+  &:hover {
+    background-color: var(--accent-light);
+  }
 }
 
 .course__wishlist__button {
@@ -207,10 +206,10 @@
   border-radius: var(--border-radius-5);
   cursor: pointer;
   margin-left: 10px;
-}
 
-.course__wishlist__button:hover {
-  background-color: var(--text-dark-light);
+  &:hover {
+    background-color: var(--text-dark-light);
+  }
 }
 
 @media screen and (max-width: 700px) {

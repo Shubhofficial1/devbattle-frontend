@@ -1,5 +1,5 @@
 import React from 'react'
-import './HomeScreen.css'
+import './HomeScreen.scss'
 import HomeContainer from '../../../components/HomeContainer/HomeContainer'
 import HomeCard from '../../../components/HomeCard/HomeCard'
 import ProductContainer from '../../../components/ProductContainer/ProductContainer'

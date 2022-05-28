@@ -1,5 +1,5 @@
 import React from 'react'
-import './FeatureContainer.css'
+import './FeatureContainer.scss'
 import { AiOutlineDelete } from 'react-icons/ai'
 
 const FeatureContainer = ({ feature, features, setFeatures }) => {

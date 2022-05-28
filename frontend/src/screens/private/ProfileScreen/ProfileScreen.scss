@@ -7,18 +7,18 @@
   display: grid;
   grid-template-columns: 235fr 641fr 365fr;
   gap: 20px;
-}
 
-.profile_container > div {
-  border-radius: var(--border-radius-5);
-}
+  > div {
+    border-radius: var(--border-radius-5);
+  }
 
-.profile_container > div:nth-child(2) {
-  background-color: var(--CARD);
-}
+  > div:nth-child(2) {
+    background-color: var(--CARD);
+  }
 
-.profile_container > div:nth-child(3) {
-  background-color: var(--CARD);
+  > div:nth-child(3) {
+    background-color: var(--CARD);
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -31,13 +31,13 @@
   .profile_container {
     grid-template-columns: 1fr;
     width: 90vw;
-  }
 
-  .profile_container > div:nth-child(1) {
-    display: none;
-  }
+    > div:nth-child(1) {
+      display: none;
+    }
 
-  .profile_container > div:nth-child(3) {
-    display: none;
+    > div:nth-child(3) {
+      display: none;
+    }
   }
 }

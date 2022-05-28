@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './Orders.css'
+import './Orders.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { getOrdersDetails } from '../../actions/orderActions'
@@ -27,7 +27,7 @@ const Orders = () => {
   }, [history, userInfo, dispatch])
   return (
     <div className='orders_content'>
-      <h1 className='orders__heading'>Orders</h1>
+      <h1>Orders</h1>
       {loading ? (
         <Loader />
       ) : error ? (

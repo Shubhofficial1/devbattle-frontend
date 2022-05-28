@@ -1,6 +1,7 @@
 import React from 'react'
-import './Settings.css'
+import './Settings.scss'
 import { Link } from 'react-router-dom'
+
 const Settings = () => {
   return (
     <div className='profile_settings noselect'>

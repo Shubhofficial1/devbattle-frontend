@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Faqs.css'
+import './Faqs.scss'
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
 const Faqs = () => {
   const [clicked, setClicked] = useState('0')

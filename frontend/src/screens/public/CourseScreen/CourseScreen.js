@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './CourseScreen.css'
+import './CourseScreen.scss'
 import Rating from '../../../components/Rating/Rating'
 import Loader from '../../../components/Loader/Loader'
 import Message from '../../../components/Message/Message'

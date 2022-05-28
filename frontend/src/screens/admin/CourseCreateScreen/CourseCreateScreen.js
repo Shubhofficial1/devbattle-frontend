@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './CourseCreateScreen.css'
+import './CourseCreateScreen.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { createCourse } from '../../../actions/coursesActions'
@@ -119,7 +119,7 @@ const CourseCreateScreen = () => {
       ) : (
         <div className='course__create'>
           <h1>Create Course</h1>
-          <form className='course__create__form' onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <p>User Name</p>
             <input
               placeholder='Enter name'
@@ -176,7 +176,6 @@ const CourseCreateScreen = () => {
                 setLanguage(e.target.value)
               }}
             />
-
             <p>Tech Stack</p>
             <input
               placeholder='Enter Stack To be added in array'
@@ -194,7 +193,6 @@ const CourseCreateScreen = () => {
               }}
             />
             <button
-              className='course__create__button'
               disabled={!stackInput && !stackImageUrl}
               onClick={addStackToList}
             >
@@ -218,11 +216,7 @@ const CourseCreateScreen = () => {
               }}
             />
 
-            <button
-              className='course__create__button'
-              disabled={!noteInput}
-              onClick={addNoteToList}
-            >
+            <button disabled={!noteInput} onClick={addNoteToList}>
               + Notes
             </button>
 
@@ -243,11 +237,7 @@ const CourseCreateScreen = () => {
                 setFeatureInput(e.target.value)
               }}
             />
-            <button
-              className='course__create__button'
-              disabled={!featureInput}
-              onClick={addFeatureToList}
-            >
+            <button disabled={!featureInput} onClick={addFeatureToList}>
               + Features
             </button>
 
@@ -260,9 +250,7 @@ const CourseCreateScreen = () => {
               />
             ))}
 
-            <button className='course__create__button' type='submit'>
-              Submit
-            </button>
+            <button type='submit'>Submit</button>
           </form>
         </div>
       )}

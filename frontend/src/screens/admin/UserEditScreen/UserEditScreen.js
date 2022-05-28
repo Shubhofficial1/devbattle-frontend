@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './UserEditScreen.css'
+import './UserEditScreen.scss'
 import { useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { getUserDetailsById, updateUser } from '../../../actions/userActions'
@@ -70,9 +70,9 @@ const UserEditScreen = () => {
         <Message error={error} />
       ) : (
         <>
-          <div className='user__edit__container'>
+          <div className='useredit__container'>
             <button
-              className='user__edit__goback noselect'
+              className='useredit__goBack noselect'
               onClick={handleGoBack}
             >
               Go Back
@@ -81,7 +81,7 @@ const UserEditScreen = () => {
             {loadingUpdate && <Loader />}
             {errorUpdate && <Message error={errorUpdate} />}
             <h1>Edit Profile</h1>
-            <form className='user__edit__form' onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <p>User Name</p>
               <input
                 placeholder='Enter name'
@@ -98,7 +98,7 @@ const UserEditScreen = () => {
                   setEmail(e.target.value)
                 }}
               />
-              <div className='user__edit__row'>
+              <div className='useredit__row'>
                 <p>Is Admin : </p>
                 <p>{isAdmin === true ? 'TRUE' : ''}</p>
                 <p>{isAdmin === false ? 'FALSE' : ''}</p>
@@ -114,11 +114,7 @@ const UserEditScreen = () => {
                 />
               </div>
 
-              <button
-                disabled={!name && !email}
-                className='user1__edit__button'
-                type='submit'
-              >
+              <button disabled={!name && !email} type='submit'>
                 Submit
               </button>
             </form>

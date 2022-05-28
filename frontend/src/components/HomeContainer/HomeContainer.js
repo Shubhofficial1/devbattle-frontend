@@ -1,5 +1,5 @@
 import React from 'react'
-import './HomeContainer.css'
+import './HomeContainer.scss'
 const HomeContainer = () => {
   return (
     <div className='home_container'>

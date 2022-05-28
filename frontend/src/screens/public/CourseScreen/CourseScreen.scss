@@ -2,19 +2,19 @@
   padding: 10px 20px;
   max-width: 1400px;
   width: 100%;
-}
 
-.course h1 {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-dark);
-  padding: 0px 20px;
-}
+  h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    padding: 0px 20px;
+  }
 
-.course p {
-  font-size: 12px;
-  color: var(--text-dark-light);
-  padding: 0px 20px;
+  p {
+    font-size: 12px;
+    color: var(--text-dark-light);
+    padding: 0px 20px;
+  }
 }
 
 .course__grid {
@@ -25,8 +25,6 @@
 }
 
 .course__card {
-  /* width: 90%; */
-  /* height: 277px; */
   padding: 10px;
   border-radius: 10px;
   background-color: var(--CARD);
@@ -34,10 +32,25 @@
   transition: all 0.1s ease;
   display: flex;
   flex-direction: column;
-}
 
-.course__card:hover {
-  transform: scale(1.005);
+  &:hover {
+    transform: scale(1.005);
+  }
+
+  h1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-top: 15px;
+    padding: 0px 10px;
+  }
+
+  p {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--text-dark-light);
+    padding: 10px 10px;
+  }
 }
 
 .course_img {
@@ -47,25 +60,15 @@
   border-radius: 10px;
 }
 
-.course__card h1 {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--text-color);
-  margin-top: 15px;
-  padding: 0px 10px;
-}
-
-.course__card p {
-  font-size: 10px;
-  font-weight: 400;
-  color: var(--text-dark-light);
-  padding: 10px 10px;
-}
-
 .course__price {
   padding: 15px 10px;
   display: flex;
   justify-content: space-between;
+
+  h3 {
+    font-size: 16px;
+    color: var(--text-dark-light);
+  }
 }
 
 .course__stacks {
@@ -82,17 +85,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.course__stack img {
-  width: 75%;
-  height: 75%;
-  object-fit: contain;
-}
-
-.course__price h3 {
-  font-size: 16px;
-  color: var(--text-dark-light);
+  img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+  }
 }
 
 @media screen and (max-width: 700px) {

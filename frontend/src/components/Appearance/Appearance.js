@@ -1,6 +1,6 @@
 import React from 'react'
 import RadioCard from '../RadioCard/RadioCard'
-import './Appearance.css'
+import './Appearance.scss'
 
 const Appearance = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Rating.css'
+import './Rating.scss'
 const Rating = ({ value, text, color }) => {
   return (
     <div className='rating'>

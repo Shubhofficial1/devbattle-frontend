@@ -1,14 +1,14 @@
 .orders_content {
   padding: 15px;
   height: fit-content;
-}
 
-.orders__heading {
-  font-size: 14px;
-  font-weight: 400;
-  padding: 5px 0px;
-  color: var(--CARD-500);
-  text-transform: uppercase;
+  h1 {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 0px;
+    color: var(--CARD-500);
+    text-transform: uppercase;
+  }
 }
 
 .order__container {
@@ -32,18 +32,18 @@
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-}
 
-.order__container__right h1 {
-  font-size: 10px;
-  font-weight: 500;
-  color: var(--CARD-500);
-  text-transform: uppercase;
-}
+  h1 {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--CARD-500);
+    text-transform: uppercase;
+  }
 
-.order__container__right p {
-  font-size: 10px;
-  font-weight: 500;
-  color: var(--CARD-500);
-  text-transform: capitalize;
+  p {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--CARD-500);
+    text-transform: capitalize;
+  }
 }

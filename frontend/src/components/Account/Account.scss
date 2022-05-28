@@ -1,0 +1,50 @@
+.account__container {
+  padding: 15px;
+
+  h1 {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 0px;
+    color: var(--CARD-500);
+    text-transform: uppercase;
+  }
+}
+
+.account__delete--container {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin: 10px 0px;
+  }
+
+  div {
+    background-color: var(--CARD-900);
+    padding: 10px;
+    border-radius: var(--border-radius-3);
+
+    p {
+      font-size: 10px;
+      color: var(--CARD-600);
+      text-transform: capitalize;
+      margin: 5px 0px;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      padding: 5px 10px;
+      margin-top: 10px;
+      border-radius: var(--border-radius-3);
+      text-transform: capitalize;
+      background-color: red;
+      cursor: pointer;
+
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+  }
+}

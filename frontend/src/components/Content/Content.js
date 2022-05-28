@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './Content.css'
+import './Content.scss'
 import { AiFillDelete } from 'react-icons/ai'
 import Message from '../Message/Message.js'
 import Loader from '../Loader/Loader.js'
@@ -46,11 +46,11 @@ const Content = () => {
   }
 
   return (
-    <div className='profile_content'>
-      <div className='profile_header'>
-        <div className='profile_header_image'></div>
-        <div className='profile_header_change'>
-          <div className='profile_header_change_container noselect'>
+    <div className='profile__content'>
+      <div className='profile__header'>
+        <div className='profile__header--image'></div>
+        <div className='profile__header--change'>
+          <div className='profile__header--changeContainer noselect'>
             <h1>Change Profile Header</h1>
             <button>
               <AiFillDelete />
@@ -63,10 +63,10 @@ const Content = () => {
       {loading && <Loader />}
       {success && <Message error={'Profile Updated'}></Message>}
 
-      <form onSubmit={handleSubmit} className='profile_form'>
+      <form onSubmit={handleSubmit} className='profile__form'>
         <h1>Public Profile</h1>
-        <div className='profile_form_row'>
-          <div className='profile_form_col'>
+        <div className='profile__form--row'>
+          <div className='profile__form--col'>
             <h2>User Name</h2>
             <input
               spellCheck='false'
@@ -76,7 +76,7 @@ const Content = () => {
               }}
             />
           </div>
-          <div className='profile_form_col'>
+          <div className='profile__form--col'>
             <h2>Password</h2>
             <input
               type='password'
@@ -88,7 +88,7 @@ const Content = () => {
             />
           </div>
         </div>
-        <div className='profile_form_row_all'>
+        <div className='profile__form--rowAll'>
           <h2>Bio</h2>
           <textarea
             value={bio}
@@ -98,7 +98,7 @@ const Content = () => {
             spellCheck='false'
           />
         </div>
-        <div className='profile_button'>
+        <div className='profile__button'>
           <button type='submit' className='noselect'>
             Save Changes
           </button>

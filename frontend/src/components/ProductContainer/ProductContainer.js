@@ -1,5 +1,5 @@
 import React from 'react'
-import './ProductContainer.css'
+import './ProductContainer.scss'
 const ProductContainer = ({
   heading,
   imageUrl,
@@ -20,9 +20,7 @@ const ProductContainer = ({
       )}
 
       <div className='product__left'>
-        <div className='product__image'>
-          {/* <img src={imageUrl} alt='coding' /> */}
-        </div>
+        <div className='product__image'></div>
       </div>
 
       {!reverse && (

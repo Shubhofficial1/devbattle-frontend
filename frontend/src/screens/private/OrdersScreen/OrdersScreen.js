@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './OrdersScreen.css'
+import './OrdersScreen.scss'
 import Details from '../../../components/Details/Details'
 import Orders from '../../../components/Orders/Orders'
 import Settings from '../../../components/Settings/Settings'

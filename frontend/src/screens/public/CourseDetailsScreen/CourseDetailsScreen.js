@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './CourseDetailsScreen.css'
+import './CourseDetailsScreen.scss'
 import { FaRegHeart } from 'react-icons/fa'
 import Loader from '../../../components/Loader/Loader'
 import Message from '../../../components/Message/Message'

@@ -14,18 +14,18 @@
   flex: 6;
   cursor: pointer;
   margin-left: 10px;
-}
 
-.radio_card_left label {
-  font-size: 14px;
-  color: var(--CARD-600);
-  font-weight: 500;
-  cursor: pointer;
-}
+  label {
+    font-size: 14px;
+    color: var(--CARD-600);
+    font-weight: 500;
+    cursor: pointer;
+  }
 
-.radio_card_left p {
-  font-size: 10px;
-  color: var(--CARD-600);
+  p {
+    font-size: 10px;
+    color: var(--CARD-600);
+  }
 }
 
 .radio_card_right {

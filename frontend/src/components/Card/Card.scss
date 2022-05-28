@@ -5,11 +5,11 @@
   padding: 20px;
   overflow-y: hidden;
   transition: all ease-in-out 0.2s;
-}
 
-.card:hover {
-  cursor: pointer;
-  transform: scale(1.02);
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
 }
 
 .card_logo {

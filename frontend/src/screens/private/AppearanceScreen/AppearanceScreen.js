@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './AppearanceScreen.css'
+import './AppearanceScreen.scss'
 import Appearance from '../../../components/Appearance/Appearance'
 import Details from '../../../components/Details/Details'
 import Settings from '../../../components/Settings/Settings'

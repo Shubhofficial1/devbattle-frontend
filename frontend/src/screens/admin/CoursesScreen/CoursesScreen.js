@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './CoursesScreen.css'
+import './CoursesScreen.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import Loader from '../../../components/Loader/Loader'

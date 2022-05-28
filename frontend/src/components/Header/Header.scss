@@ -3,17 +3,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 100;
-  transition-timing-function: ease-in;
-  transition: 1s; */
 }
-
-/* .showNav {
-  display: none !important;
-} */
 
 .header_container {
   height: 65px;
@@ -50,19 +40,19 @@ header {
   justify-content: center;
   align-items: center;
   height: inherit;
-}
 
-.header_content button {
-  cursor: pointer;
-  margin-right: 30px;
-  font-size: 1rem;
-  outline: none;
-  border: none;
-  background-color: inherit;
-  color: var(--text-color);
-  font-family: var(--font-family);
-  font-size: 14px;
-  font-weight: 600;
+  button {
+    cursor: pointer;
+    margin-right: 30px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 600;
+  }
 }
 
 .header_darkmode {

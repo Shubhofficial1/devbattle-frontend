@@ -1,5 +1,5 @@
 import React from 'react'
-import './PricingScreen.css'
+import './PricingScreen.scss'
 const PricingScreen = () => {
   return (
     <div className='pricing'>

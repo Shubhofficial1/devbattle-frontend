@@ -1,5 +1,5 @@
 import React from 'react'
-import './Details.css'
+import './Details.scss'
 import { useSelector } from 'react-redux'
 const Details = () => {
   const userLogin = useSelector((state) => state.userLogin)

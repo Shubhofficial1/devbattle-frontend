@@ -1,5 +1,5 @@
 import React from 'react'
-import './RadioCard.css'
+import './RadioCard.scss'
 const RadioCard = ({ label, icon, description, type }) => {
   return (
     <div className='radio_card noselect'>

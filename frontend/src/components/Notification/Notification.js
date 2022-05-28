@@ -1,6 +1,6 @@
 import React from 'react'
 import RadioCard from '../RadioCard/RadioCard'
-import './Notification.css'
+import './Notification.scss'
 const Notification = () => {
   return (
     <div className='notification_content'>

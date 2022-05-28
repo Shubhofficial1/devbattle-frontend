@@ -1,9 +1,9 @@
 import React from 'react'
 import RadioCard from '../RadioCard/RadioCard'
-import './Account.css'
+import './Account.scss'
 const Account = () => {
   return (
-    <div className='account_content'>
+    <div className='account__container'>
       <h1>Status</h1>
       <RadioCard
         label={'Online'}
@@ -23,10 +23,9 @@ const Account = () => {
         description={'Wear Harry Potters invisiblity cloak'}
         type={'status'}
       />
-      <div className='account_remove_container '>
-        <h1 className='delete_account_text'>Delete Account</h1>
-
-        <div className='account_delete_container'>
+      <div className='account__delete--container '>
+        <h1>Delete Account</h1>
+        <div>
           <p>
             this is one way operation. once you delete your account , there is
             no going back. please be certain ⚡.

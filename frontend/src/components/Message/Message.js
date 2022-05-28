@@ -1,5 +1,5 @@
 import React from 'react'
-import './Message.css'
+import './Message.scss'
 const Message = ({ error }) => {
   return (
     <div className='message__container noselect'>
