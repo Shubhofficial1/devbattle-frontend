@@ -45,7 +45,6 @@ function App() {
           <Route path='/orders' element={<OrdersScreen />} />
           <Route path='/appearance' element={<AppearanceScreen />} />
           <Route path='/dashboard/:id' element={<DashBoardScreen />} />
-
           {/* admin */}
           <Route path='/admin/users' element={<UsersScreen />} />
           <Route path='/admin/users/edit/:id' element={<UserEditScreen />} />

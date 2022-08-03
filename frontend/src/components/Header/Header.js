@@ -27,7 +27,7 @@ const Header = ({ show, setShow }) => {
   //     setShowNav(false)
   //   }
   // }
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
 
   const history = useNavigate()
 
@@ -37,14 +37,12 @@ const Header = ({ show, setShow }) => {
   const { userInfo } = userLogin
 
   useEffect(() => {
-    document.documentElement.setAttribute(
-      'data-theme',
-      localStorage.getItem('theme')
-    )
-    setTheme(localStorage.getItem('theme'))
-
+    // document.documentElement.setAttribute(
+    //   'data-theme',
+    //   localStorage.getItem('theme')
+    // )
+    // setTheme(localStorage.getItem('theme'))
     // window.addEventListener('scroll', controlNav)
-
     // return () => {
     //   window.removeEventListener('scroll', controlNav)
     // }
@@ -70,19 +68,19 @@ const Header = ({ show, setShow }) => {
     history('/')
   }
 
-  const saveTheme = (theme) => {
-    setTheme(theme)
-    localStorage.setItem('theme', theme)
-    document.documentElement.setAttribute('data-theme', theme)
-  }
+  // const saveTheme = (theme) => {
+  //   setTheme(theme)
+  //   localStorage.setItem('theme', theme)
+  //   document.documentElement.setAttribute('data-theme', theme)
+  // }
 
-  const switchTheme = () => {
-    if (theme === 'light') {
-      saveTheme('dark')
-    } else {
-      saveTheme('light')
-    }
-  }
+  // const switchTheme = () => {
+  //   if (theme === 'light') {
+  //     saveTheme('dark')
+  //   } else {
+  //     saveTheme('light')
+  //   }
+  // }
 
   const handleCourses = () => {
     history('/courses')
@@ -117,8 +115,7 @@ const Header = ({ show, setShow }) => {
         </div>
 
         <div className='header_profile'>
-          <BsBrightnessHigh className='header_darkmode' onClick={switchTheme} />
-
+          {/* <BsBrightnessHigh className='header_darkmode' onClick={switchTheme} /> */}
           {userInfo ? (
             <>
               <div className='header_profile_img' onClick={handleClick}>

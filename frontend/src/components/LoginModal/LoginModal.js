@@ -98,7 +98,7 @@ const LoginModal = (props) => {
                 className='login__link'
                 onClick={() => setShowLoginBody(false)}
               >
-                {'   '} Resister Now
+                {'   '} Register Now
               </span>
             </span>
             <p>
